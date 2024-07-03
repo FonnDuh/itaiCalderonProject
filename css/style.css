@@ -296,6 +296,11 @@ header {
   transform: scale(1.2);
 }
 
+#footer {
+  background-color: rgba(19, 232, 241, 0.3882352941);
+  color: #3a3a3a;
+}
+
 @media screen and (max-width: 576px) {
   .pfpName {
     display: none;
