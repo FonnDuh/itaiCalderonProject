@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&display=swap");
+
+$textColor: #3a3a3a;
+$btnColor: #1ae0ec;
+$bgColor: #13e8f163;
+
+body {
+  font-family: "Heebo", sans-serif;
+  direction: rtl;
+}
+
+// .to-top {
+// position: fixed;
+// right: 2rem;
+// bottom: 2rem;
+// font-size: 25px;
+// font-weight: 900;
+// border-radius: 100%;
+// background: $bgColor;
+// opacity: 0.7;
+// padding: 0.2rem;
+// text-decoration: none;
+//   color: black;
+//   padding-top: 1.8em;
+//   display: inline-block;
+//   position: fixed;
+//   right: 2rem;
+//   bottom: 2rem;
+//   border-color: black;
+//   text-decoration: none;
+//   transition: all 0.3s ease-out;
+// }
+
+// .to-top:before {
+//   content: "▲";
+//   font-size: 0.9em;
+//   position: absolute;
+//   top: 0;
+//   left: 50%;
+//   margin-left: -0.7em;
+//   border: solid 0.13em white;
+//   border-radius: 10em;
+//   width: 1.4em;
+//   height: 1.4em;
+//   line-height: 1.3em;
+//   border-color: inherit;
+//   transition: transform 0.5s ease-in;
+// }
+// .to-top:hover {
+//   color: pink;
+//   border-color: pink;
+// }
+// .to-top:hover:before {
+//   transform: rotate(360deg);
+// }
+
+#colorLine {
+  background-color: $btnColor;
+  height: 3px;
+}
+#menuCon {
+  max-width: 100%;
+  padding-top: 5px;
+}
+header {
+  width: 100%;
+  height: 80px;
+}
+
+#menuHeader {
+  max-width: 50%;
+  display: inline;
+}
+
+.brand {
+  max-width: 50%;
+  text-align: center;
+  padding: 0;
+}
+
+.pfpName {
+  font-family: "Satisfy", cursive;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+#pfp {
+  width: 62px;
+  height: 62px;
+}
+
+.nav-item {
+  margin: 0 30px;
+}
+
+.nav-link {
+  font-family: "Heebo", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+
+.nav-link:hover {
+  color: $btnColor;
+}
+
+.backgroundOverlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding: 1rem;
+  background-color: $btnColor;
+  opacity: 0.32;
+  z-index: 1;
+}
+
+.about {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 460px;
+  padding: 5% 15%;
+  background-image: url("../images/header-background.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  h1 {
+    font-size: 80px;
+    font-weight: 900;
+    color: $textColor;
+    text-wrap: nowrap;
+    z-index: 2;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: $textColor;
+    z-index: 2;
+  }
+}
+
+#iconList {
+  width: 100%;
+  height: 120px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 18px 15px -20px;
+
+  img {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    transition: 0.3s;
+  }
+  img:hover {
+    transform: scale(1.2);
+  }
+}
+
+#about {
+  padding: 100px 0;
+}
+
+.figure-caption {
+  font-size: 36px;
+  font-weight: 900;
+  color: $textColor;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#cv {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: $textColor;
+  background-color: $btnColor;
+  border-radius: 30px;
+  display: inline-block;
+  padding: 10px 22px;
+  transition: all 0.3s;
+}
+
+#cv:hover {
+  transform: scale(1.1);
+}
+
+.projects {
+  background-color: #f6f6f6;
+  padding: 100px 0 150px 0;
+
+  .flex-column {
+    text-align: center;
+
+    h2 {
+      font-size: 36px;
+      font-weight: 900;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
+
+.projectCon {
+  max-width: 405px;
+  min-width: 320px;
+  border-radius: 100px;
+  margin: 30px 10px;
+
+  .projectContent {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+}
+
+.projectCon:hover {
+  .projectContent {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  .projectImg {
+    transform: scale(1.15);
+  }
+}
+
+.projectLink {
+  text-decoration: none;
+}
+
+.projectContent {
+  text-align: center;
+  color: $textColor;
+  padding: 20px 20px 30px 20px;
+  background-color: white;
+  transition: 0.5s;
+  border-radius: 0 0 10px 10px;
+
+  h3 {
+    font-size: 23px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.img-wrapper {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.projectImg {
+  background-color: transparent;
+  position: relative;
+  max-width: 400px;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.img-overlay {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+#here-and-now {
+  background-image: url("../images/project-landing-page-1.PNG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.projectIcon {
+  margin-bottom: 15px;
+
+  img {
+    height: 60px;
+  }
+}
+
+.projectBtn {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: $btnColor;
+  border-radius: 23px;
+  padding: 10px 20px;
+  text-wrap: nowrap;
+  transition: all 0.3s;
+}
+
+.projectBtn:hover {
+  font-weight: 800;
+  padding: 12px 26px;
+  margin: -2px 0 -2px 0;
+  // padding: 12px 22px;
+}
+
+#formCon {
+  background-color: $textColor;
+  color: white;
+  position: relative;
+}
+
+.form-bg {
+  background-image: url("../images/Rectangle\ 41.png");
+  background-repeat: no-repeat;
+  background-size: 44% auto;
+  height: 100%;
+  width: 98%;
+  position: absolute;
+  z-index: 1;
+}
+
+#form-container {
+  padding: 10% 0 10% 20%;
+  height: 950px;
+  z-index: 2;
+  h2 {
+    font-size: 26px;
+    font-weight: 900;
+  }
+}
+
+.form-control {
+  max-width: 550px;
+  border-color: $btnColor;
+  border-radius: 2px;
+  border-width: 0px 0px 3px 0px;
+}
+
+#form_submit {
+  font-size: 22px;
+  font-weight: 800;
+  color: $textColor;
+  background-color: $btnColor;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  border: none;
+  padding: 10px 40px;
+  height: 50px;
+  transition: all 0.3s;
+}
+
+#form_submit:hover {
+  transform: scale(1.2);
+}
+
+#footer{
+  background-color: $bgColor;
+  color: $textColor;
+}
+
+@media screen and (max-width: 576px) {
+  .pfpName {
+    display: none;
+  }
+  .about h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #iconList {
+    img {
+      width: 25%;
+    }
+  }
+  .projectCon {
+    max-width: 350px;
+  }
+}
