@@ -138,9 +138,26 @@ header {
   height: 100px;
   padding: 0;
   transition: 0.3s;
+  overflow: hidden;
 }
 #iconList img:hover {
   transform: scale(1.2);
+}
+
+.icon-overlay {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+}
+.icon-overlay p {
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px #1ae0ec;
+  height: 50%;
+  margin: 0;
+  padding: 60% 0;
+  text-align: center;
 }
 
 #about {
@@ -167,7 +184,7 @@ header {
   border-radius: 30px;
   display: inline-block;
   padding: 10px 22px;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 #cv:hover {
@@ -297,7 +314,7 @@ header {
   background-repeat: no-repeat;
   background-size: 44% auto;
   height: 100%;
-  width: 98%;
+  width: 95%;
   position: absolute;
   z-index: 1;
 }
@@ -374,6 +391,11 @@ header {
   color: #1ae0ec;
 }
 
+@media screen and (max-width: 1150px) {
+  .icon-container {
+    display: none;
+  }
+}
 @media screen and (max-width: 576px) {
   .pfpName {
     display: none;
