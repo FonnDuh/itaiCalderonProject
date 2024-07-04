@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&display=swap");
 * {
   margin: 0;
@@ -62,8 +63,37 @@ header {
   color: #1ae0ec;
 }
 
+.to-top {
+  background-color: #3a3a3a;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: solid 1px white;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.to-top::after {
+  content: "▲";
+  font-size: 2em;
+  color: #fff;
+}
+
+.to-top:hover {
+  background-color: #ff9800;
+}
+
+.to-top:active {
+  background-color: #555;
+}
+
 .backgroundOverlay {
-  height: 100%;
+  height: calc(100% - 120px);
   width: 100%;
   position: absolute;
   padding: 1rem;
@@ -142,6 +172,10 @@ header {
 
 #cv:hover {
   transform: scale(1.1);
+}
+
+#gallery .row {
+  margin: 0;
 }
 
 .projects {
@@ -243,7 +277,7 @@ header {
   border-radius: 23px;
   padding: 10px 20px;
   text-wrap: nowrap;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .projectBtn:hover {
@@ -295,7 +329,7 @@ header {
   border: none;
   padding: 10px 40px;
   height: 50px;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 #form_submit:hover {

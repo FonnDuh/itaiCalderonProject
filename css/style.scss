@@ -15,51 +15,6 @@ body {
   direction: rtl;
 }
 
-// .to-top {
-// position: fixed;
-// right: 2rem;
-// bottom: 2rem;
-// font-size: 25px;
-// font-weight: 900;
-// border-radius: 100%;
-// background: $bgColor;
-// opacity: 0.7;
-// padding: 0.2rem;
-// text-decoration: none;
-//   color: black;
-//   padding-top: 1.8em;
-//   display: inline-block;
-//   position: fixed;
-//   right: 2rem;
-//   bottom: 2rem;
-//   border-color: black;
-//   text-decoration: none;
-//   transition: all 0.3s ease-out;
-// }
-
-// .to-top:before {
-//   content: "▲";
-//   font-size: 0.9em;
-//   position: absolute;
-//   top: 0;
-//   left: 50%;
-//   margin-left: -0.7em;
-//   border: solid 0.13em white;
-//   border-radius: 10em;
-//   width: 1.4em;
-//   height: 1.4em;
-//   line-height: 1.3em;
-//   border-color: inherit;
-//   transition: transform 0.5s ease-in;
-// }
-// .to-top:hover {
-//   color: pink;
-//   border-color: pink;
-// }
-// .to-top:hover:before {
-//   transform: rotate(360deg);
-// }
-
 #colorLine {
   background-color: $btnColor;
   height: 3px;
@@ -110,8 +65,35 @@ header {
   color: $btnColor;
 }
 
+
+.to-top {
+  background-color: $textColor;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: solid 1px white;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  transition: 0.3s;
+  z-index: 1000;
+}
+.to-top::after {
+  content: "▲";
+  font-size: 2em;
+  color: #fff;
+}
+.to-top:hover {
+  background-color: #ff9800;
+}
+.to-top:active {
+  background-color: #555;
+}
+
 .backgroundOverlay {
-  height: 100%;
+  height: calc(100% - 120px);
   width: 100%;
   position: absolute;
   padding: 1rem;
@@ -192,6 +174,12 @@ header {
 
 #cv:hover {
   transform: scale(1.1);
+}
+
+#gallery {
+  .row {
+    margin: 0;
+  }
 }
 
 .projects {
@@ -301,14 +289,13 @@ header {
   border-radius: 23px;
   padding: 10px 20px;
   text-wrap: nowrap;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .projectBtn:hover {
   font-weight: 800;
   padding: 12px 26px;
   margin: -2px 0 -2px 0;
-  // padding: 12px 22px;
 }
 
 #formCon {
@@ -354,14 +341,14 @@ header {
   border: none;
   padding: 10px 40px;
   height: 50px;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 #form_submit:hover {
   transform: scale(1.2);
 }
 
-::placeholder{
+::placeholder {
   text-align: right;
 }
 
@@ -418,9 +405,9 @@ header {
     max-width: 350px;
   }
 
-  #footer{
+  #footer {
     flex-direction: column;
-    div{
+    div {
       justify-content: center;
       align-items: center;
       width: 100%;
