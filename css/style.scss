@@ -29,11 +29,17 @@ header {
 }
 
 #menuHeader {
-  max-width: 50%;
-  display: inline;
+  width: 50%;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+#navbarTogglerDemo02 {
+  padding: 5px;
 }
 
 .brand {
+  position: relative;
   max-width: 50%;
   text-align: center;
   padding: 0;
@@ -58,11 +64,17 @@ header {
   font-family: "Heebo", sans-serif;
   font-size: 20px;
   font-weight: 500;
+  border-radius: 10px;
+  right: 5px;
   text-wrap: nowrap;
+  transition: 0.3s;
 }
 
 .nav-link:hover {
   color: $btnColor;
+  background-color: $textColor;
+
+  transform: scale(1.05);
 }
 
 .to-top {
@@ -148,7 +160,7 @@ header {
 .icon-overlay {
   width: 100px;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #ffffff7f;
   position: absolute;
 
   p {
@@ -270,6 +282,9 @@ header {
 
 .projectImg {
   background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
   position: relative;
   max-width: 400px;
   height: 200px;
@@ -278,17 +293,14 @@ header {
   transition: 0.5s;
 }
 
+#here-and-now {
+  background-image: url("../images/project-landing-page-1.PNG");
+}
+
 .img-overlay {
   width: 100%;
   position: absolute;
   z-index: 2;
-}
-
-#here-and-now {
-  background-image: url("../images/project-landing-page-1.PNG");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%;
 }
 
 .projectIcon {
