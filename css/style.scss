@@ -19,10 +19,12 @@ body {
   background-color: $btnColor;
   height: 3px;
 }
+
 #menuCon {
   max-width: 100%;
   padding-top: 5px;
 }
+
 header {
   width: 100%;
   height: 80px;
@@ -67,13 +69,20 @@ header {
   border-radius: 10px;
   right: 5px;
   text-wrap: nowrap;
+  -webkit-transition: 0.3;
+  -moz-transition: 0.3;
+  -ms-transition: 0.3;
+  -o-transition: 0.3;
   transition: 0.3s;
 }
 
 .nav-link:hover {
   color: $btnColor;
   background-color: $textColor;
-
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
   transform: scale(1.05);
 }
 
@@ -88,17 +97,24 @@ header {
   position: fixed;
   bottom: 40px;
   right: 30px;
+  -webkit-transition: 0.3;
+  -moz-transition: 0.3;
+  -ms-transition: 0.3;
+  -o-transition: 0.3;
   transition: 0.3s;
   z-index: 1000;
 }
+
 .to-top::after {
   content: "▲";
   font-size: 2em;
   color: #fff;
 }
+
 .to-top:hover {
   background-color: #ff9800;
 }
+
 .to-top:active {
   background-color: #555;
 }
@@ -131,6 +147,7 @@ header {
     text-wrap: nowrap;
     z-index: 2;
   }
+
   p {
     font-size: 20px;
     font-weight: 500;
@@ -149,10 +166,19 @@ header {
     width: 100px;
     height: 100px;
     padding: 0;
+    -webkit-transition: 0.3;
+    -moz-transition: 0.3;
+    -ms-transition: 0.3;
+    -o-transition: 0.3;
     transition: 0.3s;
     overflow: hidden;
   }
+
   img:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
     transform: scale(1.2);
   }
 }
@@ -167,6 +193,12 @@ header {
     font-size: 18px;
     font-weight: 500;
     text-shadow: 1px 1px 2px $btnColor;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     height: 50%;
     margin: 0;
     padding: 60% 0;
@@ -198,10 +230,18 @@ header {
   border-radius: 30px;
   display: inline-block;
   padding: 10px 22px;
+  -webkit-transition: 0.3;
+  -moz-transition: 0.3;
+  -ms-transition: 0.3;
+  -o-transition: 0.3;
   transition: 0.3s;
 }
 
 #cv:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -222,6 +262,7 @@ header {
       font-size: 36px;
       font-weight: 900;
     }
+
     p {
       font-size: 20px;
       font-weight: 500;
@@ -245,7 +286,12 @@ header {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
       rgba(0, 0, 0, 0.22) 0px 10px 10px;
   }
+
   .projectImg {
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
     transform: scale(1.15);
   }
 }
@@ -259,6 +305,10 @@ header {
   color: $textColor;
   padding: 20px 20px 30px 20px;
   background-color: white;
+  -webkit-transition: 0.5;
+  -moz-transition: 0.5;
+  -ms-transition: 0.5;
+  -o-transition: 0.5;
   transition: 0.5s;
   border-radius: 0 0 10px 10px;
 
@@ -266,6 +316,7 @@ header {
     font-size: 23px;
     font-weight: 600;
   }
+
   p {
     font-size: 16px;
     font-weight: 500;
@@ -290,6 +341,10 @@ header {
   height: 200px;
   border-radius: 10px 10px 0 0;
   z-index: 1;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -318,6 +373,10 @@ header {
   border-radius: 23px;
   padding: 10px 20px;
   text-wrap: nowrap;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -347,6 +406,7 @@ header {
   padding: 10% 0 10% 20%;
   height: 950px;
   z-index: 2;
+
   h2 {
     font-size: 26px;
     font-weight: 900;
@@ -370,10 +430,18 @@ header {
   border: none;
   padding: 10px 40px;
   height: 50px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
 #form_submit:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
   transform: scale(1.2);
 }
 
@@ -387,15 +455,27 @@ header {
   padding: 35px 12%;
   margin: 0;
   flex-wrap: wrap;
+
   div {
     margin: 25px 0;
+
     img {
       margin: auto;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
       transition: 0.3s;
     }
+
     img:hover {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
       transform: scale(1.2);
     }
+
     span {
       font-size: 14px;
       font-weight: 500;
@@ -408,6 +488,7 @@ header {
   background-color: black;
   padding: 5px 20px;
   margin: 0;
+
   p {
     font-size: 20px;
     margin-bottom: 0;
@@ -425,6 +506,7 @@ header {
   .pfpName {
     display: none;
   }
+
   .about h1 {
     font-size: 50px;
   }
@@ -436,12 +518,14 @@ header {
       width: 25%;
     }
   }
+
   .projectCon {
     max-width: 350px;
   }
 
   #footer {
     flex-direction: column;
+
     div {
       justify-content: center;
       align-items: center;
