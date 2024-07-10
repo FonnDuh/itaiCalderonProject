@@ -15,7 +15,7 @@ body {
   direction: rtl;
 }
 
-#colorLine {
+.colorLine {
   background-color: $btnColor;
   height: 3px;
 }
@@ -157,7 +157,7 @@ header {
   }
 }
 
-#iconList { 
+#iconList {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 18px 15px -20px;
   flex-wrap: wrap;
 
@@ -183,7 +183,7 @@ header {
 
 .icon-container {
   height: auto;
-  padding: 10px 0 10px 0;
+  padding: 10px 0;
 }
 
 .icon-overlay {
@@ -355,6 +355,10 @@ header {
   background-image: url("../images/project-landing-page-1.PNG");
 }
 
+#going-forward {
+  background-image: url("../images/Landing-Page-Option-ΓÇô-5-1024x577.png");
+}
+
 .img-overlay {
   width: 100%;
   position: absolute;
@@ -365,7 +369,7 @@ header {
   margin-bottom: 15px;
 
   img {
-    height: 60px;
+    height: 50px;
   }
 }
 
@@ -480,6 +484,7 @@ header {
     }
 
     span {
+      margin-top: 14px;
       font-size: 14px;
       font-weight: 500;
       text-align: center;
