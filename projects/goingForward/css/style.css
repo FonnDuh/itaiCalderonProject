@@ -10,6 +10,8 @@ body {
   direction: rtl;
 }
 
+/* Landing Page
+-----------------------------------------------------------------------------------------------------------------*/
 header {
   width: 100%;
   height: 80px;
@@ -25,6 +27,7 @@ header {
   position: relative;
   max-width: 50%;
   text-align: center;
+  text-wrap: nowrap;
   padding: 5px 0;
 }
 .brand a {
@@ -56,7 +59,8 @@ header {
 .about {
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction: column;
   height: 460px;
   padding: 5% 15%;
   background-image: url("/images/header-background.png");
@@ -68,7 +72,6 @@ header {
   font-size: 80px;
   font-weight: 900;
   color: #3a3a3a;
-  text-wrap: nowrap;
   z-index: 2;
 }
 .about p {
@@ -84,26 +87,23 @@ header {
   height: auto;
   align-items: center;
 }
-#about-buttons button {
-  font-size: 14px;
+#about-buttons a {
+  display: inline-block;
+  font-size: 16px;
   font-weight: 600;
-  text-align: center;
+  text-decoration: none;
   color: #3a3a3a;
   background-color: #1ae0ec;
-  letter-spacing: 2px;
   border-radius: 50px;
-  border: none;
-  padding: 2px 20px;
-  margin: 0 8px;
-  height: 30px;
-  z-index: 2;
+  padding: 5px 20px;
+  margin: 5px 8px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-#about-buttons button:hover {
+#about-buttons a:hover {
   -webkit-transform: scale(0.9);
   -moz-transform: scale(0.9);
   -ms-transform: scale(0.9);
@@ -215,4 +215,109 @@ header {
   font-size: 20px;
   margin-bottom: 0;
   color: #1ae0ec;
+}
+
+/* Index / Main Project Page
+-----------------------------------------------------------------------------------------------------------------*/
+#parent {
+  height: 50vh;
+  width: 100%;
+  padding: 0;
+  position: relative;
+  background-image: url("/projects/goingForward/images/BG@2x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#child {
+  position: absolute;
+  height: 50vh;
+  width: 33%;
+  min-width: 588px;
+  max-width: 600px;
+  top: 33%;
+  left: 50%;
+  padding: 75px 75px 150px 75px;
+  margin: 0 15px;
+  background-color: rgba(26, 26, 26, 0.831372549);
+  color: white;
+}
+#child h2 {
+  font-size: 36px;
+  font-weight: 900;
+}
+#child p {
+  font-size: 20px;
+  margin: 21px 0 44px 0;
+}
+#child label {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+}
+#child input {
+  margin: 0 0 20px 0;
+  border-radius: 0;
+  border: solid 1px #d31c75;
+}
+
+#form_submit {
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+  background-color: #d31c75;
+  border: none;
+  padding: 10px 40px;
+  height: 50px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#form_submit:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 1200px) {
+  #child {
+    left: auto;
+  }
+}
+@media screen and (max-width: 615px) {
+  #child {
+    min-width: 350px;
+    height: 50vh;
+    padding: 75px 40px 150px 40px;
+    top: 20%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .preview {
+    height: 500px;
+  }
+  .about p {
+    font-size: 17px;
+  }
+  #child {
+    height: 75vh;
+  }
+  #child h2 {
+    font-size: 25px;
+  }
+  #child p {
+    font-size: 15px;
+  }
+  #child label {
+    font-size: 14px;
+  }
+  #form_submit {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
