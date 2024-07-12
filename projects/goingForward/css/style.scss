@@ -70,7 +70,7 @@ header {
   flex-direction: column;
   height: 460px;
   padding: 5% 15%;
-  background-image: url("/images/header-background.png");
+  background-image: url("../images/header-background.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -123,6 +123,7 @@ header {
 #iconList {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 18px 15px -20px;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 
   img {
     width: 100px;
@@ -322,12 +323,12 @@ header {
 }
 
 @media screen and (max-width: 375px) {
-  .preview{
+  .preview {
     height: 500px;
   }
 
-  .about{
-    p{
+  .about {
+    p {
       font-size: 17px;
     }
   }
