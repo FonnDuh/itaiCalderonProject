@@ -114,7 +114,8 @@ header {
 #iconList {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 18px 15px -20px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
 }
 #iconList img {
   width: 100px;
@@ -137,28 +138,6 @@ header {
 .icon-container {
   height: auto;
   padding: 10px 0;
-}
-
-.icon-overlay {
-  width: 100px;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.4980392157);
-  position: absolute;
-}
-.icon-overlay p {
-  font-size: 18px;
-  font-weight: 500;
-  text-shadow: 1px 1px 2px #1ae0ec;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  height: 50%;
-  margin: 0;
-  padding: 60% 0;
-  text-align: center;
 }
 
 .preview {
@@ -234,6 +213,7 @@ header {
 #child {
   position: absolute;
   height: 50vh;
+  max-height: 70vh;
   width: 33%;
   min-width: 588px;
   max-width: 600px;
@@ -293,8 +273,9 @@ header {
 }
 @media screen and (max-width: 615px) {
   #child {
-    min-width: 350px;
-    height: 50vh;
+    min-width: 300px;
+    width: 90%;
+    height: 63vh;
     padding: 75px 40px 150px 40px;
     top: 20%;
   }
@@ -307,7 +288,8 @@ header {
     font-size: 17px;
   }
   #child {
-    height: 75vh;
+    height: 88vh;
+    max-height: 88vh;
   }
   #child h2 {
     font-size: 25px;
