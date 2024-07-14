@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&family=Varela+Round&display=swap");
 
 $textColor: #3a3a3a;
 $btnColor: #1ae0ec;
@@ -159,7 +159,8 @@ header {
 
   img {
     position: absolute;
-    max-width: 100%;
+    width: auto;
+    max-width: 50%;
     box-shadow: 0px 0px 48px 0px rgba(0, 0, 0, 0.5);
     left: 50%;
     transform: translateX(-50%);
@@ -214,91 +215,19 @@ header {
   }
 }
 
-/* Index / Main Project Page
------------------------------------------------------------------------------------------------------------------*/
-
-#parent {
-  height: 50vh;
-  width: 100%;
-  padding: 0;
-  position: relative;
-  background-image: url("/projects/goingForward/images/BG@2x.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#child {
-  position: absolute;
-  height: 50vh;
-  max-height: 70vh;
-  width: 33%;
-  min-width: 588px;
-  max-width: 600px;
-  top: 33%;
-  left: 50%;
-  padding: 75px 75px 150px 75px;
-  margin: 0 15px;
-  background-color: #1a1a1ad4;
-  color: white;
-
-  h2 {
-    font-size: 36px;
-    font-weight: 900;
+@media screen and (max-width: 1800px) {
+  .preview {
+    img {
+      max-width: 70%;
+    }
   }
-
-  p {
-    font-size: 20px;
-    margin: 21px 0 44px 0;
-  }
-
-  label {
-    font-size: 16px;
-    font-weight: 800;
-    margin: 0;
-  }
-  input {
-    margin: 0 0 20px 0;
-    border-radius: 0;
-    border: solid 1px #d31c75;
-  }
-}
-
-#form_submit {
-  font-size: 22px;
-  font-weight: 800;
-  color: white;
-  background-color: #d31c75;
-  border: none;
-  padding: 10px 40px;
-  height: 50px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-#form_submit:hover {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transform: scale(1.2);
 }
 
 @media screen and (max-width: 1200px) {
-  #child {
-    left: auto;
-  }
-}
-@media screen and (max-width: 615px) {
-  #child {
-    min-width: 300px;
-    width: 90%;
-    height: 63vh;
-    padding: 75px 40px 150px 40px;
-    top: 20%;
+  .preview {
+    img {
+      max-width: 90%;
+    }
   }
 }
 
@@ -308,32 +237,147 @@ header {
   }
 }
 
+/* Index / Main Project Page
+-----------------------------------------------------------------------------------------------------------------*/
 
-@media screen and (max-width: 375px) {
-  .preview {
-    height: 500px;
+#parent {
+  font-family: "Varela Round", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(#281eff, #2dff8c);
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#intro {
+  text-align: center;
+  margin-bottom: 40px;
+  h1 {
+    font-family: "Satisfy", cursive;
+    text-shadow: #00000087 0 0 36px;
+    font-size: 160px;
   }
+  h2 {
+    font-size: 32px;
+    font-weight: 400;
+  }
+  p {
+    font-size: 16px;
+  }
+}
 
-  .about {
-    p {
-      font-size: 17px;
+#form-container {
+  max-width: 1100px;
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .mb-3 {
+    width: 40%;
+  }
+  label {
+    font-size: 16px;
+    margin: 0;
+  }
+  input {
+    height: 50px;
+    color: white;
+    margin: 0 0 20px 0;
+    border-radius: 0;
+    background-color: #f6f6f624;
+    border: solid 2px white;
+  }
+  input:focus {
+    border: solid 2px #2b8eff;
+  }
+}
+
+.form_submit {
+  font-size: 16px;
+  height: 50px;
+  color: $textColor;
+  padding: 10px 40px;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  background: linear-gradient(to right, #281eff, #2dff8c);
+  transform: translateY(48%);
+}
+
+.form_submit::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  border-radius: 4px;
+  background-color: white;
+  text-wrap: nowrap;
+  z-index: -1;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.form_submit::after {
+  content: attr(data);
+  font-size: 16px;
+  background: linear-gradient(to left, #281eff, #2dff8c);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  background-clip: text;
+  text-wrap: nowrap;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.form_submit:hover::before {
+  opacity: 30%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.form_submit:hover::after {
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  #intro {
+    margin-bottom: 0;
+    h1 {
+      font-size: 60px;
     }
-  }
-
-  #child {
-    height: 88vh;
-    max-height: 88vh;
     h2 {
-      font-size: 25px;
+      font-size: 18px;
     }
     p {
-      font-size: 15px;
-    }
-    label {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
-  #form_submit {
-    font-size: 15px;
+  #form-container {
+    .d-flex {
+      flex-direction: column;
+    }
+    .mb-3 {
+      width: 100%;
+    }
+    input {
+      height: 36px;
+      margin: 0 0 10px 0;
+    }
   }
 }
