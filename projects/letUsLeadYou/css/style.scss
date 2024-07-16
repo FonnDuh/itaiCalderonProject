@@ -267,6 +267,12 @@ header {
   }
 }
 
+#form-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
 #new-form {
   font-family: "Assistant", sans-serif;
   display: flex;
@@ -274,12 +280,6 @@ header {
   justify-content: center;
   height: 25vh;
   width: 100%;
-}
-
-#form-container {
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
 }
 
 .field-con {
