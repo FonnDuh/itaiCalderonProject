@@ -73,6 +73,10 @@ header {
   background-image: url("../images/header-background.png");
   background-repeat: no-repeat;
   background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 
   h1 {

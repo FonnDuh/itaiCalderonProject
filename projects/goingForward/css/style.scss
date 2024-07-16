@@ -73,6 +73,10 @@ header {
   background-image: url("../images/header-background.png");
   background-repeat: no-repeat;
   background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 
   h1 {
@@ -225,6 +229,10 @@ header {
   background-image: url("/projects/goingForward/images/BG@2x.png");
   background-position: center center;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -307,7 +315,6 @@ header {
     height: 500px;
   }
 }
-
 
 @media screen and (max-width: 375px) {
   .preview {
