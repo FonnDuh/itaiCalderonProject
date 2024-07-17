@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&family=Varela+Round&display=swap");
-
-$textColor: #3a3a3a;
-$btnColor: #1ae0ec;
-$bgColor: #13e8f163;
+@import url(_var.scss);
 
 * {
   margin: 0;
