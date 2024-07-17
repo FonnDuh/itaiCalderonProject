@@ -359,6 +359,10 @@ header {
   background-image: url(../images/Landing-Page-Option-forward2.png);
 }
 
+#discovery {
+  background-image: url(../images/Landing-Page-Option-discovery.png);
+}
+
 .img-overlay {
   width: 100%;
   position: absolute;

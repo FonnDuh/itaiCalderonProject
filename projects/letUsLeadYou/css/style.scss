@@ -226,6 +226,14 @@ header {
     }
   }
 }
+@media screen and (max-width: 900px) {
+  .preview {
+    height: 500px;
+    img {
+      max-width: 80%;
+    }
+  }
+}
 
 @media screen and (max-width: 450px) {
   .about {

@@ -201,6 +201,14 @@ header {
   color: #1ae0ec;
 }
 
+@media screen and (max-width: 900px) {
+  .preview {
+    height: 500px;
+  }
+  .preview img {
+    max-width: 80%;
+  }
+}
 /* Index / Main Project Page
 -----------------------------------------------------------------------------------------------------------------*/
 #project {

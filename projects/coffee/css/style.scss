@@ -219,6 +219,15 @@ header {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .preview {
+    height: 500px;
+    img {
+      max-width: 80%;
+    }
+  }
+}
+
 /* Index / Main Project Page
 -----------------------------------------------------------------------------------------------------------------*/
 

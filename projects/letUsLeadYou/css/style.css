@@ -66,7 +66,10 @@ header {
   background-image: url("../images/header-background.png");
   background-repeat: no-repeat;
   background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   -ms-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 .about h1 {
@@ -98,9 +101,17 @@ header {
   border-radius: 50px;
   padding: 5px 20px;
   margin: 5px 8px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 #about-buttons a:hover {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
   transform: scale(0.9);
 }
 
@@ -114,9 +125,17 @@ header {
   width: 100px;
   height: 100px;
   padding: 0;
+  -webkit-transition: 0.3;
+  -moz-transition: 0.3;
+  -ms-transition: 0.3;
+  -o-transition: 0.3;
   transition: 0.3s;
 }
 #iconList img:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
   transform: scale(1.2);
 }
 
@@ -151,9 +170,17 @@ header {
 }
 #footer div img {
   margin: auto;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 #footer div img:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
   transform: scale(1.2);
 }
 #footer div span {
@@ -179,6 +206,14 @@ header {
     font-size: 50px;
   }
 }
+@media screen and (max-width: 900px) {
+  .preview {
+    height: 500px;
+  }
+  .preview img {
+    max-width: 80%;
+  }
+}
 @media screen and (max-width: 450px) {
   .about h1 {
     font-size: 40px;
@@ -196,7 +231,10 @@ header {
   background-image: url(../images/Path\ 15@2x.png);
   background-position: center center;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   -ms-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 .title-con h1 {
@@ -247,10 +285,6 @@ header {
   border-width: 0px 0px 3px 0px;
 }
 
-::-moz-placeholder {
-  text-align: right;
-}
-
 ::placeholder {
   text-align: right;
 }
@@ -268,6 +302,10 @@ header {
   cursor: pointer;
   top: 50%;
   transform: translateY(33.5%);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
