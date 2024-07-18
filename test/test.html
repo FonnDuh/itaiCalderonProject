@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* CSS for the grid */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(6, 1fr); /* 6 rows */
+    gap: 10px; /* Gap between grid items */
+    padding: 20px; /* Padding around the grid */
+    border: 1px solid #ccc; /* Border for visualization */
+  }
+
+  /* Styling for grid items */
+  .grid-item {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #aaa;
+    text-align: center;
+  }
+
+  /* Adjusted styles for specific items */
+  .grid-item.large {
+    grid-column: span 2; /* Spanning 2 columns */
+    grid-row: span 2; /* Spanning 2 rows */
+  }
+
+  /* Adjusted styles for specific items */
+  .grid-item.extra-large {
+    grid-column: span 2; /* Spanning 2 columns */
+    grid-row: span 3; /* Spanning 3 rows */
+  }
+
+  /* Hide specific items */
+  .grid-item.deleted {
+    display: none;
+  }
+</style>
+<title>Modified 4x6 Grid Example</title>
+</head>
+<body>
+  <div class="grid-container">
+    <!-- Creating grid items using a loop -->
+    <!-- Adjust the number of items based on 4x6 grid -->
+    <!-- For simplicity, using 21 items (4x6=24 total, deleting 3) -->
+    <!-- Example content for demonstration -->
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item large">3</div>
+    <div class="grid-item deleted">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item deleted">6</div>
+    <div class="grid-item deleted">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+    <div class="grid-item">10</div>
+    <div class="grid-item extra-large">11</div>
+    <div class="grid-item">12</div>
+    <div class="grid-item">13</div>
+    <div class="grid-item">14</div>
+    <div class="grid-item extra-large">15</div>
+    <div class="grid-item">16</div>
+    <div class="grid-item deleted">17</div>
+    <div class="grid-item">18</div>
+    <div class="grid-item">19</div>
+    <div class="grid-item deleted">20</div>
+    <div class="grid-item">21</div>
+    <div class="grid-item">22</div>
+  </div>
+</body>
+</html>

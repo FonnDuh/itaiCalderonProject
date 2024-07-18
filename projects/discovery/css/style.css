@@ -223,15 +223,14 @@ header {
   direction: ltr;
   display: flex;
   justify-content: center;
-  padding: 300px 0;
+  padding: 250px 0;
   background-color: #e5eeff;
   font-family: "Assistant", sans-serif;
 }
 
 #project-container {
   display: grid;
-  grid-template-rows: repeat(6, 271px);
-  grid-template-columns: repeat(4, 296px);
+  grid-template-areas: "item1 item2 world world" "item3 item4 world world" "item5 item6 item7 item8" "tellStory tellStory item9 item10" "tellStory tellStory item11 item12" "tellStory tellStory item13 item14";
   gap: 20px;
 }
 
@@ -242,6 +241,13 @@ header {
   align-items: center;
   text-align: center;
   background-color: #4caf50;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   width: 296px;
   height: 271px;
 }
@@ -251,6 +257,7 @@ header {
   height: 562px;
   padding: 0 50px;
   background-color: #020253;
+  grid-area: world;
   grid-column: 3/span 2;
   grid-row: 1/span 2;
 }
@@ -270,6 +277,7 @@ header {
   height: 852px;
   padding: 0 50px;
   background-color: #8e097c;
+  grid-area: tellStory;
   grid-column: 1/span 2;
   grid-row: 4/span 3;
 }
@@ -284,6 +292,76 @@ header {
   font-weight: 300;
 }
 
+#item1 {
+  grid-area: item1;
+  background-image: url(../images/Rectangle\ 515.png);
+}
+
+#item2 {
+  grid-area: item2;
+  background-image: url(../images/Rectangle\ 514.png);
+}
+
+#item3 {
+  grid-area: item3;
+  background-image: url(../images/Rectangle\ 516.png);
+}
+
+#item4 {
+  grid-area: item4;
+  background-image: url(../images/Rectangle\ 506-5.png);
+}
+
+#item5 {
+  grid-area: item5;
+  background-image: url(../images/Rectangle\ 506-2.png);
+}
+
+#item6 {
+  grid-area: item6;
+  background-image: url(../images/Rectangle\ 506-3.png);
+}
+
+#item7 {
+  grid-area: item7;
+  background-image: url(../images/Rectangle\ 506-4.png);
+}
+
+#item8 {
+  grid-area: item8;
+  background-image: url(../images/Rectangle\ 506-1.png);
+}
+
+#item9 {
+  grid-area: item9;
+  background-image: url(../images/Rectangle\ 506-8.png);
+}
+
+#item10 {
+  grid-area: item10;
+  background-image: url(../images/Rectangle\ 506-7.png);
+}
+
+#item11 {
+  grid-area: item11;
+  background-image: url(../images/Rectangle\ 506-9.png);
+}
+
+#item12 {
+  grid-area: item12;
+  background-image: url(../images/Rectangle\ 506-6.png);
+}
+
+#item13 {
+  grid-area: item13;
+  background-image: url(../images/Rectangle\ 513.png);
+}
+
+#item14 {
+  grid-area: item14;
+  background-image: url(../images/Rectangle\ 506-4.png);
+}
+
 #new-form {
   display: flex;
   flex-direction: column;
@@ -291,7 +369,7 @@ header {
 
 #form-container {
   padding: 30px 0 0 0;
-  width: 420px;
+  width: 95%;
 }
 
 .field-con {
@@ -310,6 +388,7 @@ header {
   width: 100%;
   height: 60px;
   text-align: right;
+  font-size: 20px;
   border-color: #0ee1da;
   background-color: #e5eeff;
   border-radius: 2px;
@@ -344,58 +423,108 @@ header {
   transform: scale(1.1);
 }
 
-#item1 {
-  background-image: url(../images/Rectangle\ 515.png);
+@media screen and (max-width: 1300px) {
+  #grid-body {
+    padding: 125px 0;
+  }
+  #project-container {
+    grid-template-areas: "item1 world world" "item2 world world" "item3 item4 item5" "item6 item7 item8" "tellStory tellStory item9" "tellStory tellStory item10" "tellStory tellStory item11" "item12 item13 item14";
+  }
+  .world {
+    grid-column: 2/span 2;
+    grid-row: 1/span 2;
+  }
+  .tellStory {
+    grid-column: 1/span 2;
+    grid-row: 5/span 3;
+  }
 }
-
-#item2 {
-  background-image: url(../images/Rectangle\ 514.png);
+@media screen and (max-width: 1000px) {
+  #grid-body {
+    padding: 100px 0;
+  }
+  #project-container {
+    grid-template-areas: "world world" "world world" "item1 item2" "item3 item4" "item5 item6" "item7 item8" "tellStory tellStory" "tellStory tellStory" "tellStory tellStory" "item9 item10" "item11 item12" "item13 item14";
+  }
+  .world {
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
+  }
+  .tellStory {
+    grid-column: 1/span 2;
+    grid-row: 7/span 3;
+  }
 }
-
-#item3 {
-  background-image: url(../images/Rectangle\ 516.png);
+@media screen and (max-width: 660px) {
+  #grid-body {
+    padding: 60px 0;
+  }
+  #project-container {
+    gap: 12px;
+  }
+  .grid-item {
+    margin: auto;
+    width: 240px;
+    height: 180px;
+  }
+  .world {
+    width: 500px;
+    height: 400px;
+  }
+  .world h1 {
+    font-size: 46px;
+  }
+  .tellStory {
+    width: 500px;
+    height: 650px;
+  }
+  .form-control {
+    height: 60px;
+    font-size: 16px;
+  }
 }
-
-#item4 {
-  background-image: url(../images/Rectangle\ 506-5.png);
-}
-
-#item5 {
-  background-image: url(../images/Rectangle\ 506-2.png);
-}
-
-#item6 {
-  background-image: url(../images/Rectangle\ 506-3.png);
-}
-
-#item7 {
-  background-image: url(../images/Rectangle\ 506-4.png);
-}
-
-#item8 {
-  background-image: url(../images/Rectangle\ 506-1.png);
-}
-
-#item9 {
-  background-image: url(../images/Rectangle\ 506-8.png);
-}
-
-#item10 {
-  background-image: url(../images/Rectangle\ 506-7.png);
-}
-
-#item11 {
-  background-image: url(../images/Rectangle\ 506-9.png);
-}
-
-#item12 {
-  background-image: url(../images/Rectangle\ 506-6.png);
-}
-
-#item13 {
-  background-image: url(../images/Rectangle\ 513.png);
-}
-
-#item14 {
-  background-image: url(../images/Rectangle\ 506-4.png);
+@media screen and (max-width: 500px) {
+  #grid-body {
+    padding: 0 0 25px 0;
+  }
+  #project-container {
+    max-width: 95%;
+    gap: 12px;
+  }
+  .grid-item {
+    margin: auto;
+    width: 100%;
+    height: 146px;
+  }
+  .world {
+    width: 100%;
+    height: 340px;
+    padding: 0 40px;
+    margin-bottom: 10px;
+  }
+  .world h1 {
+    font-size: 36px;
+  }
+  .tellStory {
+    width: 100%;
+    height: 500px;
+    padding: 0 25px;
+  }
+  .tellStory h2 {
+    font-size: 25px;
+  }
+  .tellStory p {
+    font-size: 15px;
+  }
+  .form-label {
+    font-size: 10px;
+  }
+  .form-control {
+    height: 33px;
+    font-size: 12px;
+  }
+  #form_submit {
+    font-size: 12px;
+    height: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
