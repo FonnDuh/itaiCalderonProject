@@ -432,10 +432,8 @@ header {
   }
   .world {
     grid-column: 2/span 2;
-    grid-row: 1/span 2;
   }
   .tellStory {
-    grid-column: 1/span 2;
     grid-row: 5/span 3;
   }
 }
@@ -448,10 +446,8 @@ header {
   }
   .world {
     grid-column: 1/span 2;
-    grid-row: 1/span 2;
   }
   .tellStory {
-    grid-column: 1/span 2;
     grid-row: 7/span 3;
   }
 }
