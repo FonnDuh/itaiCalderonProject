@@ -333,8 +333,6 @@ header {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  // box-shadow: rgba(0, 0, 0, 0.25) 0px -5px 28px,
-  //     rgba(0, 0, 0, 0.22) 0px -5px 10px;
   -webkit-transition: 0.8s;
   -moz-transition: 0.8s;
   -ms-transition: 0.8s;
@@ -366,19 +364,20 @@ header {
 #hereAndNow {
   background-image: url("../images/project-landing-page-1.png");
 }
-
 #goingForward {
   background-image: url("../images/Landing-Page-Option-forward.png");
 }
-
 #goodCoffee {
   background-image: url("../images/Landing-Page-Option-coffee.png");
 }
 #letUsLeadYou {
   background-image: url(../images/Landing-Page-Option-forward2.png);
 }
-#discovery{
+#discovery {
   background-image: url(../images/Landing-Page-Option-discovery.png);
+}
+#outsideBox {
+  background-image: url(../images/Landing-Page-Option-outsidebox.png);
 }
 
 .img-overlay {

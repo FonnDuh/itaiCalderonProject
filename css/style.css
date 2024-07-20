@@ -363,6 +363,10 @@ header {
   background-image: url(../images/Landing-Page-Option-discovery.png);
 }
 
+#outsideBox {
+  background-image: url(../images/Landing-Page-Option-outsidebox.png);
+}
+
 .img-overlay {
   width: 100%;
   position: absolute;
