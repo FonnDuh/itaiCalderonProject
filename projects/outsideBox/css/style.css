@@ -228,4 +228,64 @@ header {
   }
 }
 /* Index / Main Project Page
------------------------------------------------------------------------------------------------------------------*//*# sourceMappingURL=style.css.map */
+-----------------------------------------------------------------------------------------------------------------*/
+.main-title-con {
+  background-color: #0EE1E1;
+  height: 600px;
+  align-items: center;
+}
+
+.whatsapp {
+  background-image: url(../images/Icon\ awesome-whatsapp.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: white;
+  border-radius: 100px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+}
+
+.box-img img {
+  margin: 0 150px 0 180px;
+}
+
+.main-title {
+  max-width: 800px;
+}
+.main-title h1 {
+  font-size: 66px;
+  font-weight: 900;
+}
+.main-title p {
+  font-size: 20px;
+}
+
+.bubbles-con {
+  height: 400px;
+  justify-content: center;
+}
+
+.bubble {
+  background-color: #f8f8f8;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 45px 25px 0 25px;
+  max-width: 23%;
+}
+.bubble img {
+  width: 55px;
+}
+.bubble h2 {
+  font-size: 30px;
+  font-weight: 900;
+  color: #0EE1E1;
+}
+.bubble p {
+  text-align: center;
+  font-size: 15px;
+}/*# sourceMappingURL=style.css.map */
