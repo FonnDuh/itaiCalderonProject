@@ -233,7 +233,7 @@ header {
   background-color: #0EE1E1;
   height: 600px;
   align-items: center;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
 }
 
 .whatsapp {
@@ -264,12 +264,19 @@ header {
   transform: scale(1.1);
 }
 
+.box-img {
+  width: 30%;
+  justify-content: center;
+}
 .box-img img {
-  margin: 0 150px 0 180px;
+  max-width: 330px;
+  width: 100%;
 }
 
 .main-title {
-  max-width: 800px;
+  max-width: 840px;
+  margin-right: 30px;
+  padding-left: 40px;
 }
 .main-title h1 {
   font-size: 66px;
@@ -280,8 +287,9 @@ header {
 }
 
 .tiles-con {
-  height: 330px;
+  height: auto;
   justify-content: center;
+  align-items: center;
 }
 
 .tile {
@@ -291,7 +299,9 @@ header {
   align-items: center;
   margin: 15px 15px 0px 15px;
   border-radius: 8px;
+  min-width: 300px;
   max-width: 23%;
+  height: 330px;
 }
 .tile img {
   width: 55px;
@@ -307,6 +317,7 @@ header {
 }
 
 .form-and-map {
+  direction: ltr;
   height: 950px;
   margin-top: 50px;
   padding: 0;
@@ -436,7 +447,75 @@ header {
 }
 
 .footer-bar {
-  width: 100%;
+  width: auto;
   height: 18px;
   background-color: #0EE1E1;
+}
+
+@media screen and (max-width: 450px) {
+  .whatsapp {
+    display: none;
+  }
+  .main-title-con {
+    height: 400px;
+  }
+  .main-title h1 {
+    font-size: 33px;
+  }
+  .main-title p {
+    font-size: 15px;
+  }
+  .tiles-con {
+    width: 100%;
+  }
+  .tile {
+    width: 100%;
+  }
+  .tile h2 {
+    font-size: 22px;
+  }
+  .tile p {
+    font-size: 15px;
+  }
+  .form-and-map {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  #form-container {
+    direction: rtl;
+    height: 600px;
+    width: 100%;
+    padding: 0;
+  }
+  #new-form {
+    padding: 70px 30px;
+  }
+  #new-form h2 {
+    font-size: 32px;
+  }
+  #new-form p {
+    font-size: 15px;
+  }
+  .form-label {
+    font-size: 12px;
+  }
+  .form-control {
+    height: 36px;
+  }
+  .map {
+    width: 100%;
+    height: 350px;
+    padding: 25px;
+  }
+  .contact-bubbles {
+    height: 100px;
+  }
+  .bubble {
+    width: 45px;
+    height: 45px;
+  }
+  .bubble img, .bubble svg {
+    width: 20px;
+    height: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
