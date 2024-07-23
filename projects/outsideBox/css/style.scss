@@ -300,8 +300,6 @@ header {
 
 .main-title {
   max-width: 840px;
-  margin-right: 30px;
-  padding-left: 40px;
   h1 {
     font-size: 66px;
     font-weight: 900;
@@ -315,6 +313,8 @@ header {
   height: auto;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .tile {
@@ -344,7 +344,6 @@ header {
 .form-and-map {
   // Switch directions specifially to accommodate project request for map to be at the bottom at small screen sizes
   direction: ltr;
-  height: 950px;
   margin-top: 50px;
   padding: 0;
 }
@@ -355,6 +354,7 @@ header {
   // aspect-ratio: 4 / 3;
   // padding-top: 75%;
   background-color: $formcolor;
+  min-height: 900px;
   iframe {
     border: 0;
     width: 100%;
@@ -482,10 +482,44 @@ header {
   background-color: $formcolor;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
+  .whatsapp {
+    width: 55px;
+    height: 55px;
+    background-size: 30px;
+  }
+
+  .form-and-map {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  #form-container {
+    direction: rtl;
+    height: auto;
+    width: 100%;
+    padding: 60px 30px;
+  }
+
+  .map {
+    width: 100%;
+    min-height: auto;
+    height: 480px;
+    padding: 30px;
+  }
+
+  .bubble {
+    width: 75px;
+    height: 75px;
+    img,
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .whatsapp {
     display: none;
   }
@@ -508,7 +542,8 @@ header {
   }
 
   .tile {
-    width: 100%;
+    width: 90%;
+    max-width: none;
     h2 {
       font-size: 22px;
     }
@@ -517,20 +552,19 @@ header {
     }
   }
 
-  .form-and-map {
-    flex-direction: column;
-    margin-top: 30px;
-  }
+  // .form-and-map {
+  //   flex-direction: column;
+  //   margin-top: 30px;
+  // }
 
-  #form-container {
-    direction: rtl;
-    height: 600px;
-    width: 100%;
-    padding: 0;
-  }
+  // #form-container {
+  //   direction: rtl;
+  //   height: auto;
+  //   width: 100%;
+  //   padding: 60px 30px;
+  // }
 
   #new-form {
-    padding: 70px 30px;
     h2 {
       font-size: 32px;
     }
@@ -548,19 +582,21 @@ header {
   }
 
   .map {
-    width: 100%;
+    //   width: 100%;
+    //   min-height: auto;
     height: 350px;
     padding: 25px;
   }
 
-  .contact-bubbles{
+  .contact-bubbles {
     height: 100px;
   }
 
-  .bubble{
+  .bubble {
     width: 45px;
     height: 45px;
-    img, svg{
+    img,
+    svg {
       width: 20px;
       height: 20px;
     }
