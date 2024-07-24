@@ -60,7 +60,9 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
   flex-direction: column;
+  -ms-flex-direction: column;
   height: 460px;
   padding: 5% 15%;
   background-image: url("../images/header-background.png");
@@ -118,6 +120,7 @@ header {
 #iconList {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 18px 15px -20px;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   position: relative;
   z-index: 2;
 }
@@ -164,6 +167,7 @@ header {
   padding: 35px 12%;
   margin: 0;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
 }
 #footer div {
   margin: 25px 0;
@@ -243,6 +247,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  -ms-flex-direction: column;
   width: 43.5%;
   height: 100vh;
 }
@@ -268,6 +273,7 @@ header {
 #new-form {
   display: flex;
   flex-direction: column;
+  -ms-flex-direction: column;
 }
 
 #form-container {
@@ -323,6 +329,7 @@ header {
 @media screen and (max-width: 1300px) {
   #project {
     flex-direction: column;
+    -ms-flex-direction: column;
   }
   #side-pic {
     width: 100%;

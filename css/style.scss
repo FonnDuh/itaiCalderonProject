@@ -130,6 +130,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   height: 460px;
   padding: 5% 15%;
   background-image: url("../images/header-background.png");
@@ -161,6 +162,7 @@ header {
 #iconList {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 18px 15px -20px;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
 
   img {
     width: 100px;
@@ -487,8 +489,9 @@ header {
   padding: 35px 12%;
   margin: 0;
   flex-wrap: wrap;
-
-  div {
+  -ms-flex-wrap: wrap;
+  a {
+    text-decoration: none;
     margin: 25px 0;
 
     img {
@@ -500,19 +503,24 @@ header {
       transition: 0.3s;
     }
 
-    img:hover {
+    a {
+      text-decoration: none;
+    }
+    span {
+      color: $textColor;
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+  a:hover {
+    img {
       -webkit-transform: scale(1.2);
       -moz-transform: scale(1.2);
       -ms-transform: scale(1.2);
       -o-transform: scale(1.2);
       transform: scale(1.2);
-    }
-
-    span {
-      margin-top: 14px;
-      font-size: 14px;
-      font-weight: 500;
-      text-align: center;
     }
   }
 }
@@ -546,8 +554,9 @@ header {
 
   #footer {
     flex-direction: column;
+    -ms-flex-direction: column;
 
-    div {
+    a {
       justify-content: center;
       align-items: center;
       width: 100%;

@@ -129,6 +129,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   height: 460px;
   padding: 5% 15%;
   background-image: url("../images/header-background.png");
@@ -158,6 +159,7 @@ header {
 #iconList {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 18px 15px -20px;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
 }
 #iconList img {
   width: 100px;
@@ -344,15 +346,15 @@ header {
 }
 
 #hereAndNow {
-  background-image: url("../images/project-landing-page-1.png");
+  background-image: url(../images/project-landing-page-1.png);
 }
 
 #goingForward {
-  background-image: url("../images/Landing-Page-Option-forward.png");
+  background-image: url(../images/Landing-Page-Option-forward.png);
 }
 
 #goodCoffee {
-  background-image: url("../images/Landing-Page-Option-coffee.png");
+  background-image: url(../images/Landing-Page-Option-coffee.png);
 }
 
 #letUsLeadYou {
@@ -407,7 +409,7 @@ header {
 }
 
 .form-bg {
-  background-image: url("../images/Rectangle 41.png");
+  background-image: url(../images/Rectangle\ 41.png);
   background-repeat: no-repeat;
   -webkit-background-size: 44% auto;
   -moz-background-size: 44% auto;
@@ -472,11 +474,13 @@ header {
   padding: 35px 12%;
   margin: 0;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
 }
-#footer div {
+#footer a {
+  text-decoration: none;
   margin: 25px 0;
 }
-#footer div img {
+#footer a img {
   margin: auto;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -484,18 +488,22 @@ header {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-#footer div img:hover {
+#footer a a {
+  text-decoration: none;
+}
+#footer a span {
+  color: #3a3a3a;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+#footer a:hover img {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
   transform: scale(1.2);
-}
-#footer div span {
-  margin-top: 14px;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
 }
 
 #rights-footer {
@@ -523,8 +531,9 @@ header {
   }
   #footer {
     flex-direction: column;
+    -ms-flex-direction: column;
   }
-  #footer div {
+  #footer a {
     justify-content: center;
     align-items: center;
     width: 100%;
