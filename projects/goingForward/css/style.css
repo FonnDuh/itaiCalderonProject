@@ -162,6 +162,7 @@ header {
 }
 
 #footer {
+  justify-content: space-evenly;
   background-color: #1ae0ec;
   color: #3a3a3a;
   padding: 35px 12%;
@@ -172,6 +173,7 @@ header {
 #footer a {
   text-decoration: none;
   margin: 25px 0;
+  max-width: 160px;
 }
 #footer a img {
   margin: auto;
@@ -186,6 +188,7 @@ header {
 }
 #footer a span {
   color: #3a3a3a;
+  text-wrap: nowrap;
   margin-top: 14px;
   font-size: 14px;
   font-weight: 500;

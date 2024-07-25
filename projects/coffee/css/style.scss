@@ -171,6 +171,7 @@ header {
 }
 
 #footer {
+  justify-content: space-evenly;
   background-color: $btnColor;
   color: $textColor;
   padding: 35px 12%;
@@ -180,6 +181,7 @@ header {
   a {
     text-decoration: none;
     margin: 25px 0;
+    max-width: 160px;
 
     img {
       margin: auto;
@@ -195,6 +197,7 @@ header {
     }
     span {
       color: $textColor;
+      text-wrap: nowrap;
       margin-top: 14px;
       font-size: 14px;
       font-weight: 500;

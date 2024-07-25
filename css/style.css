@@ -207,7 +207,11 @@ header {
 }
 
 #description-con {
-  padding: 100px 0;
+  padding: 100px 20px;
+}
+#description-con img {
+  width: 141px;
+  height: 139px;
 }
 
 .figure-caption {
@@ -428,8 +432,16 @@ header {
   z-index: 2;
 }
 #form-container h2 {
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 900;
+}
+#form-container p {
+  font-size: 20px;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .form-control {
@@ -469,6 +481,7 @@ header {
 }
 
 #footer {
+  justify-content: space-evenly;
   background-color: #1ae0ec;
   color: #3a3a3a;
   padding: 35px 12%;
@@ -479,6 +492,7 @@ header {
 #footer a {
   text-decoration: none;
   margin: 25px 0;
+  max-width: 160px;
 }
 #footer a img {
   margin: auto;
@@ -493,6 +507,7 @@ header {
 }
 #footer a span {
   color: #3a3a3a;
+  text-wrap: nowrap;
   margin-top: 14px;
   font-size: 14px;
   font-weight: 500;
@@ -524,14 +539,23 @@ header {
   .about h1 {
     font-size: 50px;
   }
+  #form-container {
+    padding: 80px 20px;
+    height: 700px;
+  }
+  #form-container h2 {
+    font-size: 25px;
+  }
+  #form-container p {
+    font-size: 15px;
+  }
+  .form-label {
+    font-size: 12px;
+  }
 }
 @media screen and (max-width: 376px) {
   .projectCon {
     max-width: 350px;
-  }
-  #footer {
-    flex-direction: column;
-    -ms-flex-direction: column;
   }
   #footer a {
     justify-content: center;
@@ -541,5 +565,12 @@ header {
   }
   #rights-footer p {
     font-size: 15px;
+  }
+  #form_submit:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }/*# sourceMappingURL=style.css.map */
