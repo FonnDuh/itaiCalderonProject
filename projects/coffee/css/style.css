@@ -310,6 +310,7 @@ header {
 }
 
 #form_submit {
+  font-family: "Heebo", sans-serif;
   font-size: 22px;
   font-weight: 800;
   color: white;
