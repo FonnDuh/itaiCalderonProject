@@ -32,11 +32,22 @@ header {
   text-align: center;
   text-wrap: nowrap;
   padding: 5px 0;
-
-  a {
-    text-decoration: none;
-  }
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
+
+.brand:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 
 .pfpName {
   font-family: "Satisfy", cursive;
@@ -48,6 +59,7 @@ header {
 #pfp {
   width: 62px;
   height: 62px;
+  border-radius: 100%;
 }
 
 .backgroundOverlay {

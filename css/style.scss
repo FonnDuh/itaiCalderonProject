@@ -53,6 +53,7 @@ header {
 #pfp {
   width: 62px;
   height: 62px;
+  border-radius: 100%;
 }
 
 .nav-item {
@@ -215,8 +216,10 @@ header {
 #description-con {
   padding: 100px 20px;
   img {
-    width: 141px;
-    height: 139px;
+    box-shadow: rgba(0, 0, 0, 0.36) 0px 10px 36px 0px;
+    border-radius: 100%;
+    width: 140px;
+    height: 140px;
   }
 }
 
