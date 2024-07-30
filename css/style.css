@@ -127,10 +127,9 @@ header {
 }
 
 .about {
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   height: 460px;
   padding: 5% 15%;
   background-image: url("../images/header-background.png");
@@ -154,6 +153,7 @@ header {
   font-weight: 500;
   text-align: center;
   color: #3a3a3a;
+  max-width: 1150px;
   z-index: 2;
 }
 

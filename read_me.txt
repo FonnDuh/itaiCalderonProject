@@ -3,9 +3,15 @@
 טלפון 0544879833
 מייל itaic1901@gmail.com
 
-**** הכיוון של הטקסט לא תקין בכלל התוכנה ****
 
-כלל הפרוייקט בנוי על 4 שפות: HTML, CSS, SCSS, BOOTSTRAP.
-חוץ מ-2 פרוייקטים (goodCoffee, discovery) השתמשתי בכל ארבעת השפות בנוסף לדברים שלא נלמדו במהלך הקורס.
-לא השתמשתי בהשראה חיצונית לכתיבת הקוד או הדברים שנוספו שאינם חובה, בגלל שיש לי ניסיון קודם עם קוד ידעתי איך אני רוצה שהעמוד ישראה מעבר לדברים שצוינו כחובה.
-לדעתי הדברים שהוספתי מסבירים את עצמם, כגון כפתור "חזרה לראש העמוד" וכפתורים עם קישורים שועבדים. ניסיתי לחשוב כמה שיותר מחוץ לקופסה בלי לעבור על החוקים שנכתבו עבור הפרוייקט.
+*English
+This is a site containing all projects done by me. 
+What languages were used and a brief history of myself.
+Added things that weren't a part of the original requirements of the project.
+I tried to preserve the original "image" that was laid out whilst adding my own touches to the project.
+
+*עברית
+זה אתר המכיל את כל הפרויקטים שנעשו על ידי. 
+באילו שפות השתמשו והיסטוריה קצרה עליי.
+נוספו דברים שלא היו חלק מהדרישות המקוריות של הפרויקט.
+ ניסיתי לשמר את ה"תמונה" המקורית שהונחתה תוך הוספת נגיעות משלי לפרויקט.
