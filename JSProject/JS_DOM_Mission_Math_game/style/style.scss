@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+$fileColor: #0e36e5;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Heebo", "sans-serif";
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#titleWrapper {
+  display: flex;
+  color: $fileColor;
+  background-color: #eee;
+  text-align: center;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #0000004d;
+  h1 {
+    font-size: 54px;
+    font-weight: 900;
+  }
+}
+
+#questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  border-top: 1px solid #0000004d;
+}
+
+#question {
+  font-size: 50px;
+  font-weight: 900;
+  margin: 0 30px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#answer {
+  max-width: 200px;
+  margin-left: 25px;
+}
+
+.btn-primary {
+  width: 150px;
+  background-color: $fileColor;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+#optionsWrapper {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  max-height: 400px;
+  margin-bottom: 70px;
+}
+
+#optionsTitle {
+  width: 85%;
+  padding-top: 50px;
+  margin-bottom: 30px;
+  h3 {
+    color: $fileColor;
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+
+.input {
+  width: 250px;
+}
+
+.form-select {
+  width: 85%;
+}
+
+#history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#table {
+  table-layout: fixed;
+  max-width: 1100px;
+  margin-bottom: 30px;
+  thead {
+    text-align: center;
+    th {
+      color: $fileColor;
+      background-color: #cecece;
+    }
+  }
+}
+
+#total,
+#correctCount,
+#wrongCount,
+#pointstCount {
+  text-align: center;
+  color: $fileColor;
+  font-weight: 500;
+  background-color: #eee;
+}
+
+#tbody {
+  tr {
+    text-align: center;
+    height: 50px;
+  }
+}

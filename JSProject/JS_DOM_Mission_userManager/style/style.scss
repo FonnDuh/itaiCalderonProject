@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+$textColor: #09034c;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  direction: rtl;
+  font-family: "Heebo", sans-serif;
+}
+
+.wrapper {
+  color: $textColor;
+  padding: 50px;
+}
+
+#signupWrapper {
+  background-color: #e6e6f2;
+}
+
+#signinWrapper {
+  background-color: #f8f8f8;
+}
+
+.titleWrapper {
+  p {
+    color: gray;
+  }
+  margin-bottom: 20px;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  padding: 30px;
+}
+
+.form-control {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.formBtn {
+  background-color: $textColor;
+  width: 110px;
+  height: 38px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.formBtn:hover {
+  background-color: #5ba7be;
+  border-color: #5ba7be;
+  transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+}
+
+.formBtn:active {
+  background-color: #5ba7becc;
+  border-color: #5ba7becc;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+
+.inputfield {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: auto;
+}
+
+.inputfield,
+.formBtn {
+  margin: 0 35px;
+}
+
+#tableWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px;
+  h2 {
+    margin-bottom: 42px;
+    color: $textColor;
+    font-size: 44px;
+    font-weight: 800;
+  }
+}
+
+#table {
+  table-layout: auto;
+  max-width: 80%;
+  thead {
+    text-align: center;
+    th {
+      color: $textColor;
+      background-color: #cecece;
+    }
+  }
+}
+
+#tbody {
+  tr {
+    text-align: center;
+  }
+  td {
+    font-size: 17px;
+    line-height: 42px;
+  }
+}
+
+.tableBtn {
+  margin: 0 6px;
+}
