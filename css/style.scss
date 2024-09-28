@@ -248,6 +248,17 @@ header {
   -ms-transition: 0.3;
   -o-transition: 0.3;
   transition: 0.3s;
+  img {
+    width: 25px;
+    height: 25px;
+    border: 0;
+    box-shadow: 0 0 0 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
 }
 
 #cv:hover {
@@ -387,6 +398,24 @@ header {
 }
 #outsideBox {
   background-image: url(../images/Landing-Page-Option-outsidebox.png);
+}
+#listCart {
+  background-image: url(../images/card_Preview.png);
+}
+#mathGame {
+  background-image: url(../images/Math-game-preview.png);
+}
+#memoryGame {
+  background-image: url(../images/memory_game_preview.png);
+}
+#pageBuilder {
+  background-image: url(../images/page_builder_preview.png);
+}
+#ticTacToe {
+  background-image: url(../images/tictactoe_preview.png);
+}
+#userManager {
+  background-image: url(../images/user_manager_preview.png);
 }
 
 .img-overlay {

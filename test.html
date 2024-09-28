@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+
+      .login-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #4cae4c;
+      }
+
+      .message {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .message a {
+        color: #5cb85c;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form class="login-form" id="loginForm">
+        <h2>Login</h2>
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit">Login</button>
+        <p class="message" id="message"></p>
+        <p class="message">Don't have an account? <a href="#">Register</a></p>
+      </form>
+    </div>
+
+    <script>
+      // Sample users for local storage with isConnected property
+      const users = [
+        { username: "user1", password: "pass1", isConnected: false },
+        { username: "user2", password: "pass2", isConnected: false },
+        { username: "admin", password: "admin123", isConnected: false },
+      ];
+
+      // Store fake users in local storage
+      localStorage.setItem("users", JSON.stringify(users));
+
+      // Handle form submission
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+          const storedUsers = JSON.parse(localStorage.getItem("users"));
+
+          // Check if the username and password match any stored user
+          const user = storedUsers.find(
+            (user) => user.username === username && user.password === password
+          );
+
+          const messageElement = document.getElementById("message");
+
+          if (user) {
+            user.isConnected = true; // Update isConnected status
+            localStorage.setItem("users", JSON.stringify(storedUsers)); // Save updated users
+
+            messageElement.textContent = "Login successful!";
+            messageElement.style.color = "green";
+
+            // Redirect or perform further actions here
+          } else {
+            messageElement.textContent = "Invalid username or password.";
+            messageElement.style.color = "red";
+          }
+        });
+    </script>
+  </body>
+</html>
