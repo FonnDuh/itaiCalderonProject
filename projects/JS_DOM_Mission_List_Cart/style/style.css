@@ -74,6 +74,7 @@ header {
   -ms-flex-direction: column;
   height: 460px;
   padding: 5% 15%;
+  font-family: "Heebo", sans-serif;
   background-image: url("../images/header-background.png");
   background-repeat: no-repeat;
   background-position: center center;

@@ -267,7 +267,19 @@ header {
   margin: 0;
 }
 
+.cards-container {
+  position: sticky;
+  max-height: 950px;
+  overflow-y: hidden;
+  scrollbar-gutter: stable both-edges;
+}
+
+.cards-container:hover {
+  overflow-y: scroll;
+}
+
 .projects {
+  display: flex;
   background-color: #f6f6f6;
   padding: 100px 0 150px 0;
 }
