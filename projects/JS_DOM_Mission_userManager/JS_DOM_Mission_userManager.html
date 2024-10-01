@@ -19,7 +19,7 @@
           <h1>הרשמה</h1>
           <p>להרשמה למערכת יש למלא את הטופס</p>
         </div>
-        <form class="formWrapper">
+        <form class="formWrapper" id="signupForm">
           <div class="inputfield">
             <label for="firstName" class="form-label">שם פרטי</label>
             <input type="text" id="firstName" class="form-control" required />
@@ -40,11 +40,7 @@
               class="form-control"
               required />
           </div>
-          <button
-            type="submit"
-            class="btn btn-primary formBtn"
-            id="signupBtn"
-            onclick="addUser()">
+          <button type="submit" class="btn btn-primary formBtn" id="signupBtn">
             הרשמה
           </button>
         </form>
@@ -74,7 +70,6 @@
           <button type="submit" class="btn btn-primary formBtn" id="signinBtn">
             התחבר
           </button>
-          <!-- onclick="login()" -->
         </form>
       </div>
       <div id="tableWrapper" class="container-fluid">
@@ -82,12 +77,12 @@
         <table class="table table-light" cellpadding="10" id="table">
           <thead>
             <tr>
-              <th scope="col">שם פרטי</th>
-              <th scope="col">שם משפחה</th>
-              <th scope="col">דוא"ל</th>
-              <th scope="col">סיסמה</th>
-              <th scope="col">סטטוס</th>
-              <th scope="col">אפשרויות</th>
+              <th scope="col" id="firstField">שם פרטי</th>
+              <th scope="col" id="lastField">שם משפחה</th>
+              <th scope="col" id="mailField">דוא"ל</th>
+              <th scope="col" id="passField">סיסמה</th>
+              <th scope="col" id="statusField">סטטוס</th>
+              <th scope="col" id="optionsField">אפשרויות</th>
             </tr>
           </thead>
           <tbody id="tbody"></tbody>

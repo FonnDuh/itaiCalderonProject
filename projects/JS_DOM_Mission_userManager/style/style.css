@@ -360,6 +360,23 @@ main {
   line-height: 42px;
 }
 
+#firstField,
+#lastField {
+  width: 20%;
+}
+
+#passField {
+  width: 15%;
+}
+
+#statusField {
+  width: 5%;
+}
+
+#optionsField {
+  width: 25%;
+}
+
 .tableBtn {
   margin: 0 6px;
 }/*# sourceMappingURL=style.css.map */
