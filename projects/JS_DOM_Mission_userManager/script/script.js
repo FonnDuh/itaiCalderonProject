@@ -29,7 +29,7 @@ document.getElementById("signinForm").addEventListener("submit", (event) => {
     );
 
     if (user) {
-      if (user.connected == "מחובר") {
+      if (user.connected === "מחובר") {
         signinEmail.value = "";
         signinPassword.value = "";
         alert("משתמש כבר מחובר");
@@ -217,67 +217,6 @@ function editUser(tag) {
     };
   }
 }
-
-// function editUser(tag) {
-//    const row =
-//    document.getElementById("table").rows[tag.parentNode.parentNode.rowIndex],
-//   (tablefName = row.cells[0]),
-//   (tablelName = row.cells[1]),
-//   (tableMail = row.cells[2]),
-//   (tablePass = row.cells[3]),
-//   (userIndex = users.findIndex(
-//     (user) =>
-//       user.fName.toLowerCase() === tablefName.innerHTML.toLowerCase() &&
-//       user.lName.toLowerCase() === tablelName.innerHTML.toLowerCase() &&
-//       user.email.toLowerCase() === tableMail.innerHTML.toLowerCase() &&
-//       user.pass === tablePass.innerHTML
-//   ));
-
-//   tablefName.innerHTML = `<input type="text" id="tempFname${userIndex}" class="form-control" value = "${tablefName.innerHTML}" />`;
-//   tablelName.innerHTML = `<input type="text" id="tempLname${userIndex}" class="form-control" value = "${tablelName.innerHTML}" />`;
-//   tableMail.innerHTML = `<input type="email" id="tempMail${userIndex}" class="form-control" value = "${tableMail.innerHTML}" />`;
-//   tablePass.innerHTML = `<input type="password" id="tempPass${userIndex}" class="form-control" value = "${tablePass.innerHTML}" />`;
-//   tag.innerHTML = `<img src="./images/check_16px.svg" alt="Check Icon"> אישור`;
-
-//   tag.onclick = () => {
-//     if (
-//       document.getElementById(`tempFname${userIndex}`) &&
-//       document.getElementById(`tempLname${userIndex}`) &&
-//       document.getElementById(`tempMail${userIndex}`) &&
-//       document.getElementById(`tempPass${userIndex}`)
-//     ) {
-//       if (
-//         tablefName.innerHTML != "" &&
-//         tablelName.innerHTML != "" &&
-//         tableMail.innerHTML != "" &&
-//         tablePass.innerHTML != ""
-//       ) {
-//         tablefName.innerHTML = document.getElementById(
-//           `tempFname${userIndex}`
-//         ).value;
-//         tablelName.innerHTML = document.getElementById(
-//           `tempLname${userIndex}`
-//         ).value;
-//         tableMail.innerHTML = document.getElementById(
-//           `tempMail${userIndex}`
-//         ).value;
-//         tablePass.innerHTML = document.getElementById(
-//           `tempPass${userIndex}`
-//         ).value;
-
-//         users[userIndex].fName = tablefName.innerHTML;
-//         users[userIndex].lName = tablelName.innerHTML;
-//         users[userIndex].email = tableMail.innerHTML;
-//         users[userIndex].pass = tablePass.innerHTML;
-//         localStorage.setItem("users", JSON.stringify(users));
-//         tag.innerHTML = `<img src="./images/edit_16px.svg" alt="Edit Icon"> עריכה`;
-//         tag.setAttribute("onclick", "editUser(this)");
-//       }
-//     } else {
-//       console.error("One or more input elements not found");
-//     }
-//   };
-// }
 
 function removeRow(tag) {
   const index = tag.parentNode.parentNode.rowIndex;

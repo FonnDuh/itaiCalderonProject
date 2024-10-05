@@ -9,10 +9,6 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -167,7 +163,8 @@
     </section>
 
     <section id="gallery">
-      <div class="container-fluid flex-column justify-content-center align-items-center projects">
+      <div
+        class="container-fluid flex-column justify-content-center align-items-center projects">
         <div class="flex-column">
           <h2>עבודות נבחרות</h2>
           <p>
@@ -179,8 +176,13 @@
           <div class="row d-flex justify-content-center">
             <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
               <a
-                href="./projects/JS_DOM_Mission_List_Cart/landingPage.html"
-                class="projectLink">
+                class="projectLink"
+                data-name="עגלת קניות"
+                data-brief="הכנס/י את הפריטים שברצונך לזכור."
+                data-image="../images/card_Preview.png"
+                data-link="./JS_DOM_Mission_List_Cart.html"
+                data-zip="JS_DOM_Mission_List_Cart.zip">
+                <!-- href="./projects/JS_DOM_Mission_List_Cart/landingPage.html" -->
                 <div class="img-wrapper">
                   <div class="projectImg" id="listCart"></div>
                   <div class="img-overlay"></div>
@@ -541,7 +543,7 @@
       </div>
       <div class="container-fluid row" id="rights-footer">
         <div class="col-6">
-          <p>כל הזכויות שמורות</p>
+          <p>כל הזכויות שמורות&copy;</p>
         </div>
         <div class="col-6" style="direction: ltr">
           <p>Itai Calderon</p>
@@ -549,5 +551,6 @@
       </div>
     </footer>
     <div class="colorLine"></div>
+    <script src="/script/script.js" async defer></script>
   </body>
 </html>
