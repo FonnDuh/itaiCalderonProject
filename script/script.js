@@ -1,12 +1,11 @@
 const topTop = document.querySelector(".to-top"),
-  showOnPx = 120,
   scrollContainer = () => {
     return document.documentElement || document.body;
   };
 
 if (window.location.pathname.endsWith("index.html")) {
   document.addEventListener("scroll", () => {
-    if (scrollContainer().scrollTop > showOnPx) {
+    if (scrollContainer().scrollTop > 120) {
       topTop.classList.remove("hidden");
     } else {
       topTop.classList.add("hidden");
@@ -16,27 +15,23 @@ if (window.location.pathname.endsWith("index.html")) {
 
 document.querySelectorAll(".projectLink").forEach((button) => {
   button.addEventListener("click", function () {
-    const name = this.getAttribute("data-name"),
-      brief = this.getAttribute("data-brief"),
-      image = this.getAttribute("data-image"),
-      link = this.getAttribute("data-link"),
-      zip = this.getAttribute("data-zip"),
-      lang = this.getAttribute("data-lang");
-
     window.location.href = `landing_Page.html?name=${encodeURIComponent(
-      name
-    )}&brief=${encodeURIComponent(brief)}&image=${encodeURIComponent(
-      image
-    )}&link=${encodeURIComponent(link)}&zip=${encodeURIComponent(
-      zip
-    )}&lang=${encodeURIComponent(lang)}`;
+      this.getAttribute("data-name")
+    )}&brief=${encodeURIComponent(
+      this.getAttribute("data-brief")
+    )}&image=${encodeURIComponent(
+      this.getAttribute("data-image")
+    )}&link=${encodeURIComponent(
+      this.getAttribute("data-link")
+    )}&zip=${encodeURIComponent(
+      this.getAttribute("data-zip")
+    )}&lang=${encodeURIComponent(this.getAttribute("data-lang"))}`;
   });
 });
 
 function getQueryParams() {
   const params = {},
-    queryString = window.location.search.substring(1),
-    pairs = queryString.split("&");
+    pairs = window.location.search.substring(1).split("&");
   pairs.forEach((pair) => {
     let [key, value] = pair.split("=");
     params[decodeURIComponent(key)] = decodeURIComponent(value || "");
