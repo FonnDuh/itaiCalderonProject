@@ -63,8 +63,19 @@
 }
 
 .btn {
+  font-size: 1.2rem;
   margin: 10px 0;
   width: 45%;
+}
+
+#save-con {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+#saveBtn {
+  font-weight: 600;
 }
 
 #borderSize #borderType #borderColor {

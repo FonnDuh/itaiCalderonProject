@@ -26,7 +26,7 @@ function createEx() {
         break;
     }
   }
-  answer = eval(num1 + operator + num2);
+  answer = eval(num1 + operator + num2).toFixed(2);
   document.getElementById(
     "question"
   ).innerText = `${num1} ${operator} ${num2} = `;
