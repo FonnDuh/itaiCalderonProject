@@ -46,9 +46,7 @@ function displayProject() {
     projectImage = params.image || "https://via.placeholder.com/250",
     projectLink = params.link || "#",
     projectZip = params.zip || "#",
-    projectLang = params.lang
-      ? params.lang.split(",").map((lang) => lang.trim())
-      : [];
+    projectLang = params.lang ? params.lang.split(",") : [];
 
   const nameElement = document.getElementById("project-name"),
     briefingElement = document.getElementById("project-briefing"),
