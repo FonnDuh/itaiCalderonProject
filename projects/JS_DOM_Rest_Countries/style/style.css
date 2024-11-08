@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Heebo", sans-serif;
+  color: #333;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #f4f4f4;
+}
+
+html {
+  height: 100%;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/RL9NQ3-26169727.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #007bff;
+}
+
+#searchInput {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.card {
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  color: #007bff;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
+
+#countryDetails img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-content {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-footer {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 767px) {
+  .card {
+    margin-bottom: 20px;
+  }
+  .container {
+    margin-top: 30px;
+  }
+  #searchInput {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */

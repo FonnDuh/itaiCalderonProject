@@ -13,10 +13,10 @@ function addItem() {
       document.getElementById("error").style.display = "none";
     }, 3000);
     return;
-  } else if (priceInput.value == "") {
+  } else if (priceInput.value == "" || priceInput.value < 0) {
     priceInput.value = 0;
   }
-  if (amountInput.value == "") {
+  if (amountInput.value == "" || amountInput.value <= 0) {
     amountInput.value = 1;
   }
   document.getElementById("error").style.display = "none";
