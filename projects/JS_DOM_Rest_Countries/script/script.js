@@ -39,9 +39,9 @@ function displayCountries(countriesList) {
     const flag =
         country.flags?.[1] ||
         "https://via.placeholder.com/200?text=Flag+Not+Available",
-      flagImg = `<img src="${flag}" alt="Flag of ${country.name?.common}" class="card-img-top">`,
-      countryName = country.name?.common || "Unknown",
-      officialName = country.name?.official || "N/A",
+      flagImg = `<img src="${flag}" alt="Flag of ${country.name.common}" class="card-img-top">`,
+      countryName = country.name.common || "Unknown",
+      officialName = country.name.official || "N/A",
       region = country.region || "N/A",
       subregion = country.subregion || "N/A",
       population = country.population
@@ -94,7 +94,7 @@ async function getBorderingCountries(borders) {
     const response = await axios.get("https://restcountries.com/v3.1/all"),
       countriesData = response.data,
       borderingCountries = borders.map((borderCode) => {
-        const borderCountry = countriesData.find(
+        let borderCountry = countriesData.find(
           (country) => country.cca3 === borderCode
         );
         return borderCountry ? borderCountry.name.common : null;
@@ -173,17 +173,17 @@ async function openCountryModal(country) {
 
 function showFavorites() {
   showOnlyFavorites = !showOnlyFavorites;
-  const button = document.getElementById("showFavoritesButton");
-  button.textContent = showOnlyFavorites ? "Show All" : "Show Favorites";
+  document.getElementById("showFavoritesButton").textContent = showOnlyFavorites
+    ? "Show All"
+    : "Show Favorites";
 
-  const filteredCountries = showOnlyFavorites ? favorites : countries;
-  displayCountries(filteredCountries);
+  displayCountries(showOnlyFavorites ? favorites : countries);
 }
 function toggleFavorite(countryName) {
-  const country = countries.find((c) => c.name.common === countryName);
-  const favoriteIndex = favorites.findIndex(
-    (fav) => fav.name.common === countryName
-  );
+  const country = countries.find((c) => c.name.common === countryName),
+    favoriteIndex = favorites.findIndex(
+      (fav) => fav.name.common === countryName
+    );
 
   if (favoriteIndex === -1) {
     favorites.push(country);
@@ -213,11 +213,9 @@ function searchCountries() {
 }
 
 function sortCountries() {
-  const sortOption = document.getElementById("sortOptions").value;
-
   const sortedCountries = [...(showOnlyFavorites ? favorites : countries)];
 
-  switch (sortOption) {
+  switch (document.getElementById("sortOptions").value) {
     case "name":
       sortedCountries.sort((a, b) =>
         (a.name?.common || "").localeCompare(b.name?.common || "")
@@ -234,10 +232,27 @@ function sortCountries() {
         (a.region || "").localeCompare(b.region || "")
       );
       break;
+    case "languages":
+      sortedCountries.sort((a, b) => {
+        let languagesA = Object.values(a.languages || {}).join(", "),
+          languagesB = Object.values(b.languages || {}).join(", ");
+        return languagesA.localeCompare(languagesB);
+      });
+      break;
+    case "currencies":
+      sortedCountries.sort((a, b) => {
+        let currenciesA = Object.values(a.currencies || {})
+            .map((curr) => curr.name)
+            .join(", "),
+          currenciesB = Object.values(b.currencies || {})
+            .map((curr) => curr.name)
+            .join(", ");
+        return currenciesA.localeCompare(currenciesB);
+      });
+      break;
     default:
       break;
   }
-
   displayCountries(sortedCountries);
 }
 

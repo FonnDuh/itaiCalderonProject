@@ -16,80 +16,74 @@
       crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/style.css" />
   </head>
- <body>
-  <div id="background"></div>
-  <div class="container mt-5">
-    <h1>Countries of the World</h1>
+  <body>
+    <div id="background"></div>
+    <div class="container mt-5">
+      <h1>Countries of the World</h1>
+      <div class="row mb-3">
+        <div class="col-md-7 mb-7 mb-md-0">
+          <input
+            type="text"
+            id="searchInput"
+            class="form-control"
+            placeholder="Search for a country..."
+            oninput="searchCountries()"
+            aria-label="Search countries" />
+        </div>
 
-    <!-- Input, Sort, and Show Favorites in the Same Row -->
-    <div class="row mb-3">
-      <!-- Search Input -->
-      <div class="col-md-8 mb-8 mb-md-0">
-        <input
-          type="text"
-          id="searchInput"
-          class="form-control"
-          placeholder="Search for a country..."
-          oninput="searchCountries()"
-          aria-label="Search countries" />
-      </div>
+        <div class="col-md-3 mb-2 mb-md-0">
+          <select
+            id="sortOptions"
+            class="form-select"
+            aria-label="Sort by"
+            onchange="sortCountries()">
+            <option value="" disabled selected>Sort by...</option>
+            <option value="name">Name (A-Z)</option>
+            <option value="population">Population</option>
+            <option value="area">Area</option>
+            <option value="region">Region</option>
+            <option value="languages">Languages</option>
+            <option value="currencies">Currencies</option>
+          </select>
+        </div>
 
-      <!-- Sort Dropdown -->
-      <div class="col-md-2 mb-1 mb-md-0">
-        <select
-          id="sortOptions"
-          class="form-select"
-          aria-label="Sort by"
-          onchange="sortCountries()">
-          <option value="" disabled selected>Sort by...</option>
-          <option value="name">Sort by Name (A-Z)</option>
-          <option value="population">Sort by Population</option>
-          <option value="area">Sort by Area</option>
-          <option value="region">Sort by Region</option>
-        </select>
-      </div>
-
-      <!-- Show Favorites Button -->
-      <div class="col-md-2 text-center">
-        <button
-          id="showFavoritesButton"
-          class="btn btn-primary"
-          onclick="showFavorites()">
-          Show Favorites
-        </button>
-      </div>
-    </div>
-
-    <!-- Countries List -->
-    <div id="countriesList" class="row"></div>
-  </div>
-
-  <!-- Modal for Country Details -->
-  <div
-    class="modal fade"
-    id="countryModal"
-    tabindex="-1"
-    aria-labelledby="countryModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="countryModalLabel">Country Details</h5>
+        <div class="col-md-2 text-center">
           <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"></button>
+            id="showFavoritesButton"
+            class="btn btn-primary"
+            onclick="showFavorites()">
+            Show Favorites
+          </button>
         </div>
-        <div class="modal-body">
-          <div id="countryDetails"></div>
+      </div>
+
+      <div id="countriesList" class="row"></div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="countryModal"
+      tabindex="-1"
+      aria-labelledby="countryModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="countryModalLabel">Country Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="countryDetails"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
-  <script src="script/script.js" defer></script>
-</body>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="script/script.js" defer></script>
+  </body>
 </html>

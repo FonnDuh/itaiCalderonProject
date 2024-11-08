@@ -488,6 +488,10 @@ header {
   background-image: url(../images/user_manager_preview.png);
 }
 
+#countries {
+  background-image: url(../images/);
+}
+
 .preview {
   background-color: #ebfeff;
   position: relative;
