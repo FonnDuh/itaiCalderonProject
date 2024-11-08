@@ -1,4 +1,9 @@
-const countries = [];
+const countries = [],
+  favorites =
+    typeof Storage !== "undefined"
+      ? JSON.parse(localStorage.getItem("favorites")) || []
+      : alert("Sorry, your browser does not support Web Storage...");
+let showOnlyFavorites = false;
 
 async function fetchCountries() {
   const countriesListContainer = document.getElementById("countriesList");
@@ -25,7 +30,10 @@ function displayCountries(countriesList) {
   }
 
   countriesList.forEach((country) => {
-    const countryCard = document.createElement("div");
+    const countryCard = document.createElement("div"),
+      isFavorite = favorites.some(
+        (fav) => fav.name.common === country.name.common
+      );
     countryCard.classList.add("col-md-4", "col-sm-6", "mb-4");
 
     const flag =
@@ -53,7 +61,14 @@ function displayCountries(countriesList) {
       <div class="card country-card">
         ${flagImg}
         <div class="card-body">
-          <h5 class="card-title">${countryName}</h5>
+          <div class="d-flex justify-content-between align-items-center">
+            <h5 class="card-title">${countryName}</h5>
+            <button class="favorite-button ${
+              isFavorite ? "favorited" : ""
+            }" onclick="event.stopPropagation(); toggleFavorite('${countryName}')">
+              ${isFavorite ? "★" : "☆"}
+            </button>
+          </div>
           <p class="card-text"><strong>Official Name:</strong> ${officialName}</p>
           <p class="card-text"><strong>Region:</strong> ${region}</p>
           <p class="card-text"><strong>Subregion:</strong> ${subregion}</p>
@@ -156,6 +171,33 @@ async function openCountryModal(country) {
   new bootstrap.Modal(document.getElementById("countryModal")).show();
 }
 
+function showFavorites() {
+  showOnlyFavorites = !showOnlyFavorites;
+  const button = document.getElementById("showFavoritesButton");
+  button.textContent = showOnlyFavorites ? "Show All" : "Show Favorites";
+
+  const filteredCountries = showOnlyFavorites ? favorites : countries;
+  displayCountries(filteredCountries);
+}
+function toggleFavorite(countryName) {
+  const country = countries.find((c) => c.name.common === countryName);
+  const favoriteIndex = favorites.findIndex(
+    (fav) => fav.name.common === countryName
+  );
+
+  if (favoriteIndex === -1) {
+    favorites.push(country);
+  } else {
+    favorites.splice(favoriteIndex, 1);
+  }
+
+  typeof Storage !== "undefined"
+    ? localStorage.setItem("favorites", JSON.stringify(favorites))
+    : alert("Sorry, your browser does not support Web Storage...");
+
+  displayCountries(countries);
+}
+
 function searchCountries() {
   const searchTerm = document
       .getElementById("searchInput")
@@ -168,6 +210,35 @@ function searchCountries() {
     );
 
   displayCountries(filteredCountries);
+}
+
+function sortCountries() {
+  const sortOption = document.getElementById("sortOptions").value;
+
+  const sortedCountries = [...(showOnlyFavorites ? favorites : countries)];
+
+  switch (sortOption) {
+    case "name":
+      sortedCountries.sort((a, b) =>
+        (a.name?.common || "").localeCompare(b.name?.common || "")
+      );
+      break;
+    case "population":
+      sortedCountries.sort((a, b) => (b.population || 0) - (a.population || 0));
+      break;
+    case "area":
+      sortedCountries.sort((a, b) => (b.area || 0) - (a.area || 0));
+      break;
+    case "region":
+      sortedCountries.sort((a, b) =>
+        (a.region || "").localeCompare(b.region || "")
+      );
+      break;
+    default:
+      break;
+  }
+
+  displayCountries(sortedCountries);
 }
 
 fetchCountries();
