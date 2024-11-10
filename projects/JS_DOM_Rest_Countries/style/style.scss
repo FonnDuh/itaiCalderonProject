@@ -66,7 +66,7 @@ h1 {
 
 .card-title {
   color: $primary;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -94,6 +94,27 @@ h1 {
   margin-bottom: 20px;
 }
 
+.favorite-button {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+}
+
+.favorite-button.favorited {
+  color: gold;
+}
+
+.favorite-button:hover {
+  color: #ffa500;
+}
+
 .modal-content {
   padding: 20px;
   border-radius: 10px;
@@ -106,7 +127,10 @@ h1 {
 }
 
 .modal-title {
-  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
 }
 
 .modal-footer {
@@ -126,25 +150,4 @@ h1 {
     width: 100%;
     margin-bottom: 20px;
   }
-}
-
-.favorite-button {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #ccc;
-  transition: color 0.3s;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  -ms-transition: color 0.3s;
-  -o-transition: color 0.3s;
-}
-
-.favorite-button.favorited {
-  color: gold;
-}
-
-.favorite-button:hover {
-  color: #ffa500;
 }

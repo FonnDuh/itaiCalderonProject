@@ -37,11 +37,12 @@ function displayCountries(countriesList) {
     countryCard.classList.add("col-md-4", "col-sm-6", "mb-4");
 
     const flag =
-        country.flags?.[1] ||
+        country.flags.png ||
+        country.flags.svg ||
         "https://via.placeholder.com/200?text=Flag+Not+Available",
-      flagImg = `<img src="${flag}" alt="Flag of ${country.name.common}" class="card-img-top">`,
-      countryName = country.name.common || "Unknown",
-      officialName = country.name.official || "N/A",
+      flagImg = `<img src="${flag}" alt="Flag of ${country.name?.common}" class="card-img-top">`,
+      countryName = country.name?.common || "Unknown",
+      officialName = country.name?.official || "N/A",
       region = country.region || "N/A",
       subregion = country.subregion || "N/A",
       population = country.population
@@ -144,7 +145,8 @@ async function openCountryModal(country) {
 
   document.getElementById("countryDetails").innerHTML = `
     <img src="${
-      country.flags?.[1] ||
+      country.flags.png ||
+      country.flags.svg ||
       "https://via.placeholder.com/200?text=Flag+Not+Available"
     }"
     alt="Flag of ${country.name?.common}" class="img-fluid mb-3">
