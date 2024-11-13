@@ -25,6 +25,10 @@ body {
   background-repeat: no-repeat;
   background-color: white;
   border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
   box-shadow: 0px 3px 6px #00000029;
   cursor: pointer;
   width: 100px;
@@ -157,8 +161,12 @@ body {
   font-size: 20px;
   border-color: $formcolor;
   background-color: #e5eeff;
-  border-radius: 2px;
   border-width: 0px 0px 5px 0px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
 
 #form_field {
@@ -208,6 +216,10 @@ body {
   background-repeat: no-repeat;
   background-color: $formcolor;
   border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
   box-shadow: 0px 3px 6px #00000029;
   margin: 0 17.5px;
   -webkit-transition: 0.3s;
@@ -215,7 +227,7 @@ body {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  img {
+  img : {
     width: 35px;
     height: 35px;
   }

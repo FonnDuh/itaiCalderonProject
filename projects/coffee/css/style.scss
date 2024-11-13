@@ -86,8 +86,12 @@ body {
   height: 50px;
   border-color: $formcolor;
   background-color: #e5eeff;
-  border-radius: 2px;
   border-width: 0px 0px 3px 0px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
 
 #form_submit {
@@ -156,7 +160,6 @@ body {
     width: 80%;
   }
   .form-label {
-    // Was Originally 10px but was too small to read.
     font-size: 12px;
   }
   .form-control {
