@@ -58,16 +58,6 @@ h2 {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
-
-.btn:hover {
-  background-color: #9f9f9f;
-}
-
-.btn:focus {
-  background-color: black;
-  color: #fff;
-}
-
 .reset {
   padding: 15px 20px;
   background-color: #fff;
@@ -87,10 +77,12 @@ h2 {
   -o-transition: 0.3s;
 }
 
+.btn:hover,
 .reset:hover {
   background-color: #9f9f9f;
 }
 
+.btn:focus,
 .reset:focus {
   background-color: black;
   color: #fff;
@@ -185,4 +177,120 @@ h2 {
 
 .boxMatch::after {
   opacity: 0;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  .btn,
+  .reset {
+    width: 70px;
+    font-size: 1.1rem;
+    padding: 8px 0;
+  }
+  .reset {
+    padding: 10px 15px;
+  }
+  .container {
+    padding: 30px 50px;
+  }
+  .item {
+    width: 90px;
+    height: 90px;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .btn,
+  .reset {
+    width: 60px;
+    font-size: 1rem;
+    padding: 6px 0;
+  }
+  .reset {
+    padding: 8px 12px;
+  }
+  .container {
+    padding: 20px 40px;
+  }
+  .item {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+  #diffSelect {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .btn,
+  .reset {
+    width: 50px;
+    font-size: 0.9rem;
+    padding: 5px 0;
+  }
+  .reset {
+    padding: 6px 10px;
+  }
+  .container {
+    padding: 15px 30px;
+  }
+  .item {
+    width: 70px;
+    height: 70px;
+    font-size: 1.6rem;
+  }
+  #diffSelect {
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 0.9rem;
+  }
+  .btn,
+  .reset {
+    width: 45px;
+    font-size: 0.8rem;
+    padding: 4px 0;
+  }
+  .reset {
+    padding: 5px 8px;
+  }
+  .container {
+    padding: 10px 20px;
+  }
+  .item {
+    width: 60px;
+    height: 60px;
+    font-size: 1.4rem;
+  }
+  #diffSelect {
+    width: 95%;
+  }
+  #board {
+    gap: 5px;
+  }
 }

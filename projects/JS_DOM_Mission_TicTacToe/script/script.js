@@ -1,5 +1,6 @@
-let turnX = true, //true means X turnX
+let turnX = true, // true means it's X's turn
   tiles = [];
+
 function resetBoard() {
   setTimeout(function () {
     location.reload();
@@ -23,7 +24,7 @@ function checkWinner() {
     resetBoard();
   }
 
-  //check vertical
+  // check vertical
   else if (tiles[1] == tiles[4] && tiles[4] == tiles[7] && tiles[1] != "") {
     document.getElementById("winnerMsg").innerText = `Player ${tiles[7]} Won!`;
     resetBoard();
@@ -35,7 +36,7 @@ function checkWinner() {
     resetBoard();
   }
 
-  //check diagonal
+  // check diagonal
   else if (tiles[1] == tiles[5] && tiles[5] == tiles[9] && tiles[1] != "") {
     document.getElementById("winnerMsg").innerText = `Player ${tiles[1]} Won!`;
     resetBoard();
@@ -60,12 +61,16 @@ function checkWinner() {
 
 function insertTile(id) {
   let currentTile = document.getElementById(id);
-  if (turnX && currentTile.innerHTML == "") {
+  if (turnX && currentTile.innerHTML === "") {
     currentTile.innerHTML = "X";
+    currentTile.classList.add("x");
     turnX = !turnX;
-  } else if (!turnX && currentTile.innerHTML == "") {
+    document.getElementById("turnMessage").innerText = "Player O's turn";
+  } else if (!turnX && currentTile.innerHTML === "") {
     currentTile.innerHTML = "O";
+    currentTile.classList.add("o");
     turnX = !turnX;
+    document.getElementById("turnMessage").innerText = "Player X's turn";
   }
   checkWinner();
 }

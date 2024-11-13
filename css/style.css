@@ -334,12 +334,8 @@ header {
 .cards-container {
   position: sticky;
   max-height: 950px;
-  overflow-y: hidden;
-  scrollbar-gutter: stable both-edges;
-}
-
-.cards-container:hover {
   overflow-y: scroll;
+  scrollbar-gutter: stable both-edges;
 }
 
 .projects {

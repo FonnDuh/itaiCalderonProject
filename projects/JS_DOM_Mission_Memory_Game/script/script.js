@@ -69,23 +69,23 @@ function createBoard(diff) {
   let game_emojis;
   switch (diff) {
     case 1:
-      game_emojis = easy.sort(() => Math.random() - 0.5);
-      document.getElementById("board").style.grid = "1fr / auto auto auto auto";
+      game_emojis = [...easy].sort(() => Math.random() - 0.5);
+      document.getElementById("board").style.gridTemplateColumns =
+        "repeat(4, 1fr)";
       break;
     case 2:
-      game_emojis = medium.sort(() => Math.random() - 0.5);
-      document.getElementById("board").style.grid =
-        "1fr / auto auto auto auto auto";
+      game_emojis = [...medium].sort(() => Math.random() - 0.5);
+      document.getElementById("board").style.gridTemplateColumns =
+        "repeat(5, 1fr)";
       break;
     case 3:
-      game_emojis = hard.sort(() => Math.random() - 0.5);
-      document.getElementById("board").style.grid =
-        "1fr / auto auto auto auto auto auto";
-      break;
-    default:
+      game_emojis = [...hard].sort(() => Math.random() - 0.5);
+      document.getElementById("board").style.gridTemplateColumns =
+        "repeat(6, 1fr)";
       break;
   }
   document.getElementById("diffSelect").style.display = "none";
+  document.getElementById("board").innerHTML = "";
   for (let i = 0; i < game_emojis.length; i++) {
     let item = document.createElement("div");
     item.classList.add("item");
