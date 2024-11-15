@@ -24,7 +24,6 @@
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3019607843);
 }
-
 #titleWrapper h1 {
   font-size: 2.5rem;
   font-weight: 900;
@@ -77,7 +76,6 @@
   padding-top: 30px;
   margin-bottom: 20px;
 }
-
 #optionsTitle h3 {
   color: #0e36e5;
   font-size: 1.8rem;
@@ -107,6 +105,17 @@
   max-width: 1100px;
   margin-bottom: 20px;
   font-size: 0.9rem;
+}
+#table thead {
+  text-align: center;
+}
+#table thead th {
+  color: #0e36e5;
+  background-color: #cecece;
+}
+
+#tbody tr {
+  text-align: center;
 }
 
 #total,

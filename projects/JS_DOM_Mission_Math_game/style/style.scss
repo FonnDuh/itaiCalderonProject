@@ -25,11 +25,10 @@ $fileColor: #0e36e5;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #0000004d;
-}
-
-#titleWrapper h1 {
-  font-size: 2.5rem;
-  font-weight: 900;
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
 }
 
 #questions {
@@ -78,12 +77,11 @@ $fileColor: #0e36e5;
   width: 85%;
   padding-top: 30px;
   margin-bottom: 20px;
-}
-
-#optionsTitle h3 {
-  color: $fileColor;
-  font-size: 1.8rem;
-  font-weight: 700;
+  h3 {
+    color: $fileColor;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
 }
 
 .input {
@@ -109,6 +107,19 @@ $fileColor: #0e36e5;
   max-width: 1100px;
   margin-bottom: 20px;
   font-size: 0.9rem;
+  thead {
+    text-align: center;
+    th {
+      color: $fileColor;
+      background-color: #cecece;
+    }
+  }
+}
+
+#tbody {
+  tr {
+    text-align: center;
+  }
 }
 
 #total,

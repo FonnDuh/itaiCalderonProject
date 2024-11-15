@@ -150,10 +150,14 @@ main {
   }
   #currency {
     width: 65px;
+    margin-bottom: 10px;
   }
 
   .inputField {
     flex-direction: column;
     align-items: center;
+  }
+  th{
+    font-size: 14px;
   }
 }

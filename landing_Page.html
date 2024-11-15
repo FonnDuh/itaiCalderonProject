@@ -14,7 +14,7 @@
   <body>
     <header>
       <div class="colorLine"></div>
-      <div class="d-flex justify-content-around">
+      <div class="d-flex justify-content-around brand-con">
         <a href="index.html" class="landing-brand">
           <img
             id="pfp"
@@ -25,21 +25,6 @@
         </a>
       </div>
     </header>
-
-    <section style="position: relative">
-      <div class="backgroundOverlay"></div>
-      <div class="container-fluid about d-flex">
-        <h1 id="project-name"></h1>
-        <p>שלום אורח!</p>
-        <p id="project-briefing"></p>
-        <div id="about-buttons">
-          <a id="project-link" role="button" href="#" target="_blank"
-            >לצפייה בפרוייקט >></a
-          >
-          <a id="project-zip" role="button" href="#">להודרת הפרוייקט >></a>
-        </div>
-      </div>
-    </section>
     <section>
       <div
         class="container-fluid d-flex align-items-center justify-content-center"
@@ -47,13 +32,24 @@
         <!-- Language icons will be dynamically added here -->
       </div>
     </section>
-
-    <section>
-      <div class="preview">
-        <img id="project-image" src="" alt="Project Preview" />
+    <section class="position-relative d-flex flex-grow-1">
+      <div
+        class="about-landing-page container-fluid d-flex justify-content-center align-items-center">
+        <div class="preview d-flex justify-content-end">
+          <img id="project-image" src="" alt="Project Preview" />
+        </div>
+        <div class="d-flex flex-column">
+          <h1 id="project-name"></h1>
+          <p id="project-briefing"></p>
+          <div id="about-buttons">
+            <a id="project-link" role="button" href="#" target="_blank"
+              >לצפייה בפרוייקט >></a
+            >
+            <a id="project-zip" role="button" href="#">להודרת הפרוייקט >></a>
+          </div>
+        </div>
       </div>
     </section>
-
     <footer>
       <div class="container-fluid d-flex row" id="footer">
         <!-- No acc -->
@@ -109,7 +105,7 @@
         </div>
       </div>
     </footer>
-    <div class="colorLine"></div>
+    <div class="colorLine" id="bottonLine"></div>
     <script src="script/script.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
