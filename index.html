@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Itai Calderon Project</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,7 +16,7 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style/style.css" />
   </head>
 
   <body>
@@ -161,7 +164,7 @@
       <div
         class="container-fluid flex-column justify-content-center align-items-center projects">
         <div class="flex-column">
-          <h2>עבודות נבחרות</h2>
+          <h2>עבודות נבחרות: HTML</h2>
           <p>
             לפניך מספר עבודות ופרוייקטים שבחרתי להציג באתר, בניהם כמה שבאו ממקור
             אישי וחלק כבקשות שונות.
@@ -169,211 +172,6 @@
         </div>
         <div class="cards-container">
           <div class="row d-flex justify-content-center">
-            <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
-              <a
-                class="projectLink"
-                data-name="מדינות העולם"
-                data-brief="תחקור את מדינות העולם בצורה קלה ומיידית."
-                data-image="images/countries_preview.png"
-                data-link="projects/JS_DOM_Rest_Countries/JS_DOM_Rest_Countries.html"
-                data-zip="JS_DOM_Rest_Countries.zip"
-                data-lang="API,ES6,JS,SASS,Bootstrap,CSS,HTML">
-                <div class="img-wrapper">
-                  <div class="projectImg" id="countries"></div>
-                  <div class="img-overlay"></div>
-                </div>
-                <div class="projectContent">
-                  <h3 class="projectTitle">Countries of the World</h3>
-                  <p class="projectDesc">
-                    תחקור את מדינות העולם בצורה קלה ומיידית.
-                  </p>
-                  <div class="projectIcon">
-                    <img src="images/img-API.png" alt="API Icon" />
-                    <img src="images/img-ES6.png" alt="ES6 Icon" />
-                    <img src="images/img-JS.png" alt="Javascript Icon" />
-                    <img src="images/img-SASS.png" alt="SASS Icon" />
-                    <img src="images/img-Bootstrap.png" alt="Bootstrap Icon" />
-                    <img src="images/img-CSS.png" alt="CSS Icon" />
-                    <img src="images/img-HTML.png" alt="HTML Icon" />
-                  </div>
-                  <span class="projectBtn">לעמוד הפרויקט >></span>
-                </div>
-              </a>
-            </div>
-            <div class="row d-flex justify-content-center">
-              <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
-                <a
-                  class="projectLink"
-                  data-name="עגלת קניות"
-                  data-brief="הכנס/י את הפריטים שברצונך לזכור."
-                  data-image="images/card_Preview.png"
-                  data-link="projects/JS_DOM_Mission_List_Cart/JS_DOM_Mission_List_Cart.html"
-                  data-zip="JS_DOM_Mission_List_Cart.zip"
-                  data-lang="JS,Bootstrap,CSS,HTML">
-                  <div class="img-wrapper">
-                    <div class="projectImg" id="listCart"></div>
-                    <div class="img-overlay"></div>
-                  </div>
-                  <div class="projectContent">
-                    <h3 class="projectTitle">List Cart</h3>
-                    <p class="projectDesc">הכנס/י את הפריטים שברצונך לזכור.</p>
-                    <div class="projectIcon">
-                      <img src="images/img-JS.png" alt="Javascript Icon" />
-                      <img
-                        src="images/img-Bootstrap.png"
-                        alt="Bootstrap Icon" />
-                      <img src="images/img-CSS.png" alt="CSS Icon" />
-                      <img src="images/img-HTML.png" alt="HTML Icon" />
-                    </div>
-                    <span class="projectBtn">לעמוד הפרויקט >></span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
-                <a
-                  class="projectLink"
-                  data-name="משחק החשבון"
-                  data-brief="אתגר את עצמך בעזרת המשחק חשבון."
-                  data-image="images/Math-game-preview.png"
-                  data-link="projects/JS_DOM_Mission_Math_game/JS_DOM_Mission_Math_game.html"
-                  data-zip="JS_DOM_Mission_Math_game.zip"
-                  data-lang="JS,SASS,Bootstrap,CSS,HTML">
-                  <div class="img-wrapper">
-                    <div class="projectImg" id="mathGame"></div>
-                    <div class="img-overlay"></div>
-                  </div>
-                  <div class="projectContent">
-                    <h3 class="projectTitle">Math Game</h3>
-                    <p class="projectDesc">אתגר את עצמך בעזרת המשחק חשבון.</p>
-                    <div class="projectIcon">
-                      <img src="images/img-JS.png" alt="Javascript Icon" />
-                      <img src="images/img-SASS.png" alt="SASS Icon" />
-                      <img
-                        src="images/img-Bootstrap.png"
-                        alt="Bootstrap Icon" />
-                      <img src="images/img-CSS.png" alt="CSS Icon" />
-                      <img src="images/img-HTML.png" alt="HTML Icon" />
-                    </div>
-                    <span class="projectBtn">לעמוד הפרויקט >></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
-                <a
-                  class="projectLink"
-                  data-name="משחק הזיכרון"
-                  data-brief="אתגר את עצמך בעזרת המשחק הזיכרון."
-                  data-image="images/memory_game_preview.png"
-                  data-link="projects/JS_DOM_Mission_Memory_Game/JS_DOM_Mission_Memory_Game.html"
-                  data-zip="JS_DOM_Mission_Memory_Game.zip"
-                  data-lang="JS,CSS,HTML">
-                  <div class="img-wrapper">
-                    <div class="projectImg" id="memoryGame"></div>
-                    <div class="img-overlay"></div>
-                  </div>
-                  <div class="projectContent">
-                    <h3 class="projectTitle">Memory Game</h3>
-                    <p class="projectDesc">אתגר את עצמך בעזרת המשחק הזיכרון.</p>
-                    <div class="projectIcon">
-                      <img src="images/img-JS.png" alt="Javascript Icon" />
-                      <img src="images/img-CSS.png" alt="CSS Icon" />
-                      <img src="images/img-HTML.png" alt="HTML Icon" />
-                    </div>
-                    <span class="projectBtn">לעמוד הפרויקט >></span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="row d-flex justify-content-center">
-              <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
-                <a
-                  class="projectLink"
-                  data-name="בונה מסך"
-                  data-brief="עמוד שהמאפשר לכל אחד ליצור כל צורה שיצטרך."
-                  data-image="images/page_builder_preview.png"
-                  data-link="projects/JS_DOM_Mission_PageBuilder/JS_DOM_Mission_PageBuilder.html"
-                  data-zip="JS_DOM_Mission_PageBuilder.zip"
-                  data-lang="JS,SASS,Bootstrap,CSS,HTML">
-                  <div class="img-wrapper">
-                    <div class="projectImg" id="pageBuilder"></div>
-                    <div class="img-overlay"></div>
-                  </div>
-                  <div class="projectContent">
-                    <h3 class="projectTitle">Page Builder</h3>
-                    <p class="projectDesc">
-                      עמוד שהמאפשר לכל אחד ליצור כל צורה שיצטרך.
-                    </p>
-                    <div class="projectIcon">
-                      <img src="images/img-JS.png" alt="Javascript Icon" />
-                      <img src="images/img-SASS.png" alt="SASS Icon" />
-                      <img
-                        src="images/img-Bootstrap.png"
-                        alt="Bootstrap Icon" />
-                      <img src="images/img-CSS.png" alt="CSS Icon" />
-                      <img src="images/img-HTML.png" alt="HTML Icon" />
-                    </div>
-                    <span class="projectBtn">לעמוד הפרויקט >></span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
-                <a
-                  class="projectLink"
-                  data-name="איקס עיגול"
-                  data-brief="משחק משגע של איקס איגול."
-                  data-image="images/tictactoe_preview.png"
-                  data-link="projects/JS_DOM_Mission_TicTacToe/JS_DOM_Mission_TicTacToe.html"
-                  data-zip="JS_DOM_Mission_TicTacToe.zip"
-                  data-lang="JS,CSS,HTML">
-                  <div class="img-wrapper">
-                    <div class="projectImg" id="ticTacToe"></div>
-                    <div class="img-overlay"></div>
-                  </div>
-                  <div class="projectContent">
-                    <h3 class="projectTitle">Tic Tac Toe</h3>
-                    <p class="projectDesc">משחק משגע של איקס איגול.</p>
-                    <div class="projectIcon">
-                      <img src="images/img-JS.png" alt="Javascript Icon" />
-                      <img src="images/img-CSS.png" alt="CSS Icon" />
-                      <img src="images/img-HTML.png" alt="HTML Icon" />
-                    </div>
-                    <span class="projectBtn">לעמוד הפרויקט >></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
-                <a
-                  class="projectLink"
-                  data-name="מנהל משתמשים"
-                  data-brief="מערכת ניהול משתמשים"
-                  data-image="images/user_manager_preview.png"
-                  data-link="projects/JS_DOM_Mission_userManager/JS_DOM_Mission_userManager.html"
-                  data-zip="JS_DOM_Mission_userManager.zip"
-                  data-lang="JS,SASS,Bootstrap,CSS,HTML">
-                  <div class="img-wrapper">
-                    <div class="projectImg" id="userManager"></div>
-                    <div class="img-overlay"></div>
-                  </div>
-                  <div class="projectContent">
-                    <h3 class="projectTitle">User Manager</h3>
-                    <p class="projectDesc">מערכת ניהול משתמשים</p>
-                    <div class="projectIcon">
-                      <img src="images/img-JS.png" alt="Javascript Icon" />
-                      <img src="images/img-SASS.png" alt="SASS Icon" />
-                      <img
-                        src="images/img-Bootstrap.png"
-                        alt="Bootstrap Icon" />
-                      <img src="images/img-CSS.png" alt="CSS Icon" />
-                      <img src="images/img-HTML.png" alt="HTML Icon" />
-                    </div>
-                    <span class="projectBtn">לעמוד הפרויקט >></span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
             <div class="row d-flex justify-content-center">
               <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
                 <a
@@ -566,6 +364,224 @@
           </div>
         </div>
       </div>
+      <div
+        class="container-fluid flex-column justify-content-center align-items-center projects">
+        <div class="flex-column">
+          <h2>עבודות נבחרות: Javascript</h2>
+          <p>
+            לפניך מספר עבודות ופרוייקטים שבחרתי להציג באתר, בניהם כמה שבאו ממקור
+            אישי וחלק כבקשות שונות.
+          </p>
+        </div>
+        <div class="cards-container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
+              <a
+                class="projectLink"
+                data-name="מדינות העולם"
+                data-brief="תחקור את מדינות העולם בצורה קלה ומיידית."
+                data-image="images/countries_preview.png"
+                data-link="projects/JS_DOM_Rest_Countries/JS_DOM_Rest_Countries.html"
+                data-zip="JS_DOM_Rest_Countries.zip"
+                data-lang="API,ES6,JS,SASS,Bootstrap,CSS,HTML">
+                <div class="img-wrapper">
+                  <div class="projectImg" id="countries"></div>
+                  <div class="img-overlay"></div>
+                </div>
+                <div class="projectContent">
+                  <h3 class="projectTitle">Countries of the World</h3>
+                  <p class="projectDesc">
+                    תחקור את מדינות העולם בצורה קלה ומיידית.
+                  </p>
+                  <div class="projectIcon">
+                    <img src="images/img-API.png" alt="API Icon" />
+                    <img src="images/img-ES6.png" alt="ES6 Icon" />
+                    <img src="images/img-JS.png" alt="Javascript Icon" />
+                    <img src="images/img-SASS.png" alt="SASS Icon" />
+                    <img src="images/img-Bootstrap.png" alt="Bootstrap Icon" />
+                    <img src="images/img-CSS.png" alt="CSS Icon" />
+                    <img src="images/img-HTML.png" alt="HTML Icon" />
+                  </div>
+                  <span class="projectBtn">לעמוד הפרויקט >></span>
+                </div>
+              </a>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
+                <a
+                  class="projectLink"
+                  data-name="עגלת קניות"
+                  data-brief="הכנס/י את הפריטים שברצונך לזכור."
+                  data-image="images/card_Preview.png"
+                  data-link="projects/JS_DOM_Mission_List_Cart/JS_DOM_Mission_List_Cart.html"
+                  data-zip="JS_DOM_Mission_List_Cart.zip"
+                  data-lang="JS,Bootstrap,CSS,HTML">
+                  <div class="img-wrapper">
+                    <div class="projectImg" id="listCart"></div>
+                    <div class="img-overlay"></div>
+                  </div>
+                  <div class="projectContent">
+                    <h3 class="projectTitle">List Cart</h3>
+                    <p class="projectDesc">הכנס/י את הפריטים שברצונך לזכור.</p>
+                    <div class="projectIcon">
+                      <img src="images/img-JS.png" alt="Javascript Icon" />
+                      <img
+                        src="images/img-Bootstrap.png"
+                        alt="Bootstrap Icon" />
+                      <img src="images/img-CSS.png" alt="CSS Icon" />
+                      <img src="images/img-HTML.png" alt="HTML Icon" />
+                    </div>
+                    <span class="projectBtn">לעמוד הפרויקט >></span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
+                <a
+                  class="projectLink"
+                  data-name="משחק החשבון"
+                  data-brief="אתגר את עצמך בעזרת המשחק חשבון."
+                  data-image="images/Math-game-preview.png"
+                  data-link="projects/JS_DOM_Mission_Math_game/JS_DOM_Mission_Math_game.html"
+                  data-zip="JS_DOM_Mission_Math_game.zip"
+                  data-lang="JS,SASS,Bootstrap,CSS,HTML">
+                  <div class="img-wrapper">
+                    <div class="projectImg" id="mathGame"></div>
+                    <div class="img-overlay"></div>
+                  </div>
+                  <div class="projectContent">
+                    <h3 class="projectTitle">Math Game</h3>
+                    <p class="projectDesc">אתגר את עצמך בעזרת המשחק חשבון.</p>
+                    <div class="projectIcon">
+                      <img src="images/img-JS.png" alt="Javascript Icon" />
+                      <img src="images/img-SASS.png" alt="SASS Icon" />
+                      <img
+                        src="images/img-Bootstrap.png"
+                        alt="Bootstrap Icon" />
+                      <img src="images/img-CSS.png" alt="CSS Icon" />
+                      <img src="images/img-HTML.png" alt="HTML Icon" />
+                    </div>
+                    <span class="projectBtn">לעמוד הפרויקט >></span>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
+                <a
+                  class="projectLink"
+                  data-name="משחק הזיכרון"
+                  data-brief="אתגר את עצמך בעזרת המשחק הזיכרון."
+                  data-image="images/memory_game_preview.png"
+                  data-link="projects/JS_DOM_Mission_Memory_Game/JS_DOM_Mission_Memory_Game.html"
+                  data-zip="JS_DOM_Mission_Memory_Game.zip"
+                  data-lang="JS,CSS,HTML">
+                  <div class="img-wrapper">
+                    <div class="projectImg" id="memoryGame"></div>
+                    <div class="img-overlay"></div>
+                  </div>
+                  <div class="projectContent">
+                    <h3 class="projectTitle">Memory Game</h3>
+                    <p class="projectDesc">אתגר את עצמך בעזרת המשחק הזיכרון.</p>
+                    <div class="projectIcon">
+                      <img src="images/img-JS.png" alt="Javascript Icon" />
+                      <img src="images/img-CSS.png" alt="CSS Icon" />
+                      <img src="images/img-HTML.png" alt="HTML Icon" />
+                    </div>
+                    <span class="projectBtn">לעמוד הפרויקט >></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
+                <a
+                  class="projectLink"
+                  data-name="בונה מסך"
+                  data-brief="עמוד שהמאפשר לכל אחד ליצור כל צורה שיצטרך."
+                  data-image="images/page_builder_preview.png"
+                  data-link="projects/JS_DOM_Mission_PageBuilder/JS_DOM_Mission_PageBuilder.html"
+                  data-zip="JS_DOM_Mission_PageBuilder.zip"
+                  data-lang="JS,SASS,Bootstrap,CSS,HTML">
+                  <div class="img-wrapper">
+                    <div class="projectImg" id="pageBuilder"></div>
+                    <div class="img-overlay"></div>
+                  </div>
+                  <div class="projectContent">
+                    <h3 class="projectTitle">Page Builder</h3>
+                    <p class="projectDesc">
+                      עמוד המאפשר לכל אחד ליצור כל צורה שיצטרך.
+                    </p>
+                    <div class="projectIcon">
+                      <img src="images/img-JS.png" alt="Javascript Icon" />
+                      <img src="images/img-SASS.png" alt="SASS Icon" />
+                      <img
+                        src="images/img-Bootstrap.png"
+                        alt="Bootstrap Icon" />
+                      <img src="images/img-CSS.png" alt="CSS Icon" />
+                      <img src="images/img-HTML.png" alt="HTML Icon" />
+                    </div>
+                    <span class="projectBtn">לעמוד הפרויקט >></span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
+                <a
+                  class="projectLink"
+                  data-name="איקס עיגול"
+                  data-brief="משחק משגע של איקס איגול."
+                  data-image="images/tictactoe_preview.png"
+                  data-link="projects/JS_DOM_Mission_TicTacToe/JS_DOM_Mission_TicTacToe.html"
+                  data-zip="JS_DOM_Mission_TicTacToe.zip"
+                  data-lang="JS,CSS,HTML">
+                  <div class="img-wrapper">
+                    <div class="projectImg" id="ticTacToe"></div>
+                    <div class="img-overlay"></div>
+                  </div>
+                  <div class="projectContent">
+                    <h3 class="projectTitle">Tic Tac Toe</h3>
+                    <p class="projectDesc">משחק משגע של איקס איגול.</p>
+                    <div class="projectIcon">
+                      <img src="images/img-JS.png" alt="Javascript Icon" />
+                      <img src="images/img-CSS.png" alt="CSS Icon" />
+                      <img src="images/img-HTML.png" alt="HTML Icon" />
+                    </div>
+                    <span class="projectBtn">לעמוד הפרויקט >></span>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 projectCon">
+                <a
+                  class="projectLink"
+                  data-name="מנהל משתמשים"
+                  data-brief="מערכת ניהול משתמשים"
+                  data-image="images/user_manager_preview.png"
+                  data-link="projects/JS_DOM_Mission_userManager/JS_DOM_Mission_userManager.html"
+                  data-zip="JS_DOM_Mission_userManager.zip"
+                  data-lang="JS,SASS,Bootstrap,CSS,HTML">
+                  <div class="img-wrapper">
+                    <div class="projectImg" id="userManager"></div>
+                    <div class="img-overlay"></div>
+                  </div>
+                  <div class="projectContent">
+                    <h3 class="projectTitle">User Manager</h3>
+                    <p class="projectDesc">מערכת ניהול משתמשים</p>
+                    <div class="projectIcon">
+                      <img src="images/img-JS.png" alt="Javascript Icon" />
+                      <img src="images/img-SASS.png" alt="SASS Icon" />
+                      <img
+                        src="images/img-Bootstrap.png"
+                        alt="Bootstrap Icon" />
+                      <img src="images/img-CSS.png" alt="CSS Icon" />
+                      <img src="images/img-HTML.png" alt="HTML Icon" />
+                    </div>
+                    <span class="projectBtn">לעמוד הפרויקט >></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
@@ -577,24 +593,41 @@
           <form id="new-form">
             <div class="mb-3">
               <label for="fullName" class="form-label">שם מלא</label>
-              <input type="text" class="form-control" id="fullName" required />
+              <input
+                type="text"
+                class="form-control"
+                id="fullName"
+                name="fullName"
+                required />
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">מייל</label>
-              <input type="email" class="form-control" id="email" required />
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required />
             </div>
             <div class="mb-3">
               <label for="phone" class="form-label">טלפון</label>
-              <input type="tel" class="form-control" id="phone" required />
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                name="phone"
+                required />
             </div>
             <div class="mb-3">
               <label for="form_field" class="form-label">הודעה</label>
               <textarea
                 class="form-control"
                 id="form_field"
+                name="message"
                 rows="4"
                 required></textarea>
             </div>
+            <div id="feedback-msg" style="display: none"></div>
             <button type="submit" id="form_submit">שליחה</button>
           </form>
         </div>

@@ -71,8 +71,12 @@ body {
   height: 50px;
   border-color: #d3e10e;
   background-color: #f6f6f6;
-  border-radius: 2px;
   border-width: 0px 0px 3px 0px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
 
 ::placeholder {
@@ -91,12 +95,16 @@ body {
   width: 150px;
   cursor: pointer;
   top: 50%;
-  transform: translateY(33.5%);
+  transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
-  transition: 0.3s;
+  transform: translateY(33.5%);
+  -webkit-transform: translateY(33.5%);
+  -moz-transform: translateY(33.5%);
+  -ms-transform: translateY(33.5%);
+  -o-transform: translateY(33.5%);
 }
 
 #form_submit:hover {

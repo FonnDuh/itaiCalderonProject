@@ -58,9 +58,13 @@ body {
   height: 50px;
   color: white;
   margin: 0 0 20px 0;
-  border-radius: 0;
   background-color: rgba(246, 246, 246, 0.1411764706);
   border: solid 2px white;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
 }
 #form-container input:focus {
   border: solid 2px #2b8eff;
@@ -78,6 +82,10 @@ body {
   border-radius: 5px;
   background: linear-gradient(to right, #281eff, #2dff8c);
   transform: translateY(48%);
+  -webkit-transform: translateY(48%);
+  -moz-transform: translateY(48%);
+  -ms-transform: translateY(48%);
+  -o-transform: translateY(48%);
 }
 
 .form_submit::before {

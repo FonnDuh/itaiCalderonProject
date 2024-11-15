@@ -93,3 +93,43 @@ function displayProject() {
     }
   });
 }
+
+(function () {
+  emailjs.init("WW9nXm0FlOZqhUIDI");
+})();
+
+document.getElementById("new-form").addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent the default form submission
+
+  const formElement = document.getElementById("new-form"),
+    feedbackMessageElement = document.getElementById("feedback-msg");
+
+  feedbackMessageElement.classList.remove("success-message", "error-message");
+  feedbackMessageElement.textContent = "שולח...";
+
+  feedbackMessageElement.style.display = "block";
+
+  emailjs.sendForm("service_zjypz7f", "template_y6hue9a", formElement).then(
+    (response) => {
+      feedbackMessageElement.classList.add("success-message");
+      feedbackMessageElement.textContent = "ההודעה נשלחה בהצלחה!";
+
+      setTimeout(() => {
+        feedbackMessageElement.style.display = "none";
+      }, 5000);
+
+      formElement.reset();
+      console.log("SUCCESS!", response);
+    },
+    (error) => {
+      feedbackMessageElement.classList.add("error-message");
+      feedbackMessageElement.textContent = "נראה שמשהו השתבש, אנא נסה שנית.";
+
+      setTimeout(() => {
+        feedbackMessageElement.style.display = "none";
+      }, 5000);
+
+      console.log("FAILURE...", error);
+    }
+  );
+});

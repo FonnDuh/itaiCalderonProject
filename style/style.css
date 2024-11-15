@@ -55,19 +55,19 @@ header {
   text-wrap: nowrap;
   padding: 5px 0;
   text-decoration: none;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 
 .landing-brand:hover {
+  transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 .pfpName {
@@ -81,6 +81,10 @@ header {
   width: 62px;
   height: 62px;
   border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
 }
 
 .nav-item {
@@ -92,23 +96,27 @@ header {
   font-size: 20px;
   font-weight: 500;
   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   right: 5px;
   text-wrap: nowrap;
-  -webkit-transition: 0.3;
-  -moz-transition: 0.3;
-  -ms-transition: 0.3;
-  -o-transition: 0.3;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 
 .nav-link:hover {
   color: #1ae0ec;
   background-color: #3a3a3a;
+  transform: scale(1.05);
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
-  transform: scale(1.05);
 }
 
 .to-top {
@@ -119,15 +127,19 @@ header {
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border: solid 1px white;
   position: fixed;
   bottom: 40px;
   right: 30px;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   z-index: 1000;
 }
 
@@ -168,11 +180,11 @@ header {
   background-image: url("../images/header-background.png");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
 }
 .about h1 {
   font-size: 80px;
@@ -203,20 +215,24 @@ header {
   color: #3a3a3a;
   background-color: #1ae0ec;
   border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
   padding: 5px 20px;
   margin: 5px 8px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 #about-buttons a:hover {
+  transform: scale(0.9);
   -webkit-transform: scale(0.9);
   -moz-transform: scale(0.9);
   -ms-transform: scale(0.9);
   -o-transform: scale(0.9);
-  transform: scale(0.9);
 }
 
 #iconList {
@@ -230,18 +246,18 @@ header {
   width: 100px;
   height: 100px;
   padding: 0;
-  -webkit-transition: 0.3;
-  -moz-transition: 0.3;
-  -ms-transition: 0.3;
-  -o-transition: 0.3;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 #iconList img:hover {
+  transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
-  transform: scale(1.2);
 }
 
 .icon-container {
@@ -259,12 +275,12 @@ header {
   font-size: 18px;
   font-weight: 500;
   text-shadow: 1px 1px 2px #1ae0ec;
+  user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
   height: 50%;
   margin: 0;
   padding: 60% 0;
@@ -275,10 +291,14 @@ header {
   padding: 100px 20px;
 }
 #description-con img {
-  box-shadow: rgba(0, 0, 0, 0.36) 0px 10px 36px 0px;
-  border-radius: 100%;
   width: 140px;
   height: 140px;
+  box-shadow: rgba(0, 0, 0, 0.36) 0px 10px 36px 0px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
 }
 
 .figure-caption {
@@ -299,13 +319,17 @@ header {
   color: #3a3a3a;
   background-color: #1ae0ec;
   border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
   display: inline-block;
   padding: 10px 22px;
-  -webkit-transition: 0.3;
-  -moz-transition: 0.3;
-  -ms-transition: 0.3;
-  -o-transition: 0.3;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 #cv img {
   width: 25px;
@@ -320,22 +344,15 @@ header {
 }
 
 #cv:hover {
+  transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 #gallery .row {
   margin: 0;
-}
-
-.cards-container {
-  position: sticky;
-  max-height: 950px;
-  overflow-y: scroll;
-  scrollbar-gutter: stable both-edges;
 }
 
 .projects {
@@ -358,10 +375,15 @@ header {
 .projectCon {
   max-width: 405px;
   min-width: 320px;
-  border-radius: 100px;
   margin: 30px 10px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
 }
-.projectCon .projectContent {
+
+.projectContent {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
@@ -369,11 +391,11 @@ header {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .projectCon:hover .projectImg {
+  transform: scale(1.15);
   -webkit-transform: scale(1.15);
   -moz-transform: scale(1.15);
   -ms-transform: scale(1.15);
   -o-transform: scale(1.15);
-  transform: scale(1.15);
 }
 
 .projectLink {
@@ -386,33 +408,44 @@ header {
   color: #3a3a3a;
   padding: 20px 20px 30px 20px;
   background-color: white;
-  -webkit-transition: 0.8s;
-  -moz-transition: 0.8s;
-  -ms-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
   border-radius: 0 0 10px 10px;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  -ms-border-radius: 0 0 10px 10px;
+  -o-border-radius: 0 0 10px 10px;
+  transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
 }
-.projectContent h3 {
+
+.projectTitle {
   font-size: 23px;
   font-weight: 600;
 }
-.projectContent p {
+
+.projectDesc {
   font-size: 16px;
   font-weight: 500;
+  color: #555;
 }
 
 .img-wrapper {
-  width: 100%;
-  border-radius: 10px 10px 0 0;
   position: relative;
-  z-index: 1;
+  width: 100%;
   overflow: hidden;
-  -webkit-transition: 0.8s;
-  -moz-transition: 0.8s;
-  -ms-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
+  z-index: 1;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+  transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
 }
 
 .projectImg {
@@ -427,13 +460,17 @@ header {
   position: relative;
   max-width: 400px;
   height: 200px;
-  border-radius: 10px 10px 0 0;
   z-index: 1;
-  -webkit-transition: 0.8s;
-  -moz-transition: 0.8s;
-  -ms-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+  transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
 }
 
 #hereAndNow {
@@ -501,6 +538,10 @@ header {
   box-shadow: 0px 0px 48px 0px rgba(0, 0, 0, 0.5);
   left: 50%;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
 .img-overlay {
@@ -521,13 +562,17 @@ header {
   font-weight: 500;
   background-color: #1ae0ec;
   border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  -ms-border-radius: 23px;
+  -o-border-radius: 23px;
   padding: 10px 20px;
   text-wrap: nowrap;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .projectBtn:hover {
@@ -545,11 +590,11 @@ header {
 .form-bg {
   background-image: url(../images/Rectangle\ 41.png);
   background-repeat: no-repeat;
+  background-size: 44% auto;
   -webkit-background-size: 44% auto;
   -moz-background-size: 44% auto;
   -ms-background-size: 44% auto;
   -o-background-size: 44% auto;
-  background-size: 44% auto;
   height: 100%;
   width: 95%;
   position: absolute;
@@ -577,8 +622,12 @@ header {
 .form-control {
   max-width: 550px;
   border-color: #1ae0ec;
-  border-radius: 2px;
   border-width: 0px 0px 3px 0px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
 
 #form_submit {
@@ -588,26 +637,53 @@ header {
   background-color: #1ae0ec;
   letter-spacing: 2px;
   border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
   border: none;
   padding: 10px 40px;
   height: 50px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 
 #form_submit:hover {
+  transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
-  transform: scale(1.2);
 }
 
 ::placeholder {
   text-align: right;
+}
+
+#feedback-msg {
+  max-width: 550px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
 }
 
 #footer {
@@ -626,11 +702,11 @@ header {
 }
 #footer a img {
   margin: auto;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 #footer a a {
   text-decoration: none;
@@ -644,11 +720,11 @@ header {
   text-align: center;
 }
 #footer a:hover img {
+  transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
-  transform: scale(1.2);
 }
 
 #rights-footer {
@@ -697,10 +773,10 @@ header {
     font-size: 15px;
   }
   #form_submit:hover {
+    transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
-    transform: scale(1.1);
   }
 }/*# sourceMappingURL=style.css.map */

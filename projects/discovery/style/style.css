@@ -183,8 +183,12 @@ body {
   font-size: 20px;
   border-color: #0ee1da;
   background-color: #e5eeff;
-  border-radius: 2px;
   border-width: 0px 0px 5px 0px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
 
 #form_field {
