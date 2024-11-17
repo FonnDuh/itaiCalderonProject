@@ -84,14 +84,7 @@ function displayProject() {
     projectImage = params.image || "https://via.placeholder.com/250",
     projectLink = params.link || "#",
     projectZip = params.zip || "#",
-    projectLang = params.lang ? params.lang.split(",") : [];
-
-  const nameElement = document.getElementById("project-name"),
-    briefingElement = document.getElementById("project-briefing"),
-    imageElement = document.getElementById("project-image"),
-    linkElement = document.getElementById("project-link"),
-    zipElement = document.getElementById("project-zip"),
-    iconList = document.getElementById("iconList"),
+    projectLang = params.lang ? params.lang.split(",") : [],
     languageMap = {
       HTML: { img: "images/img-HTML.png", alt: "HTML Icon" },
       CSS: { img: "images/img-CSS.png", alt: "CSS Icon" },
@@ -109,11 +102,11 @@ function displayProject() {
       NodeJS: { img: "images/img-NodeJS.png", alt: "NodeJS Icon" },
     };
 
-  nameElement.innerText = projectName;
-  briefingElement.innerText = projectBriefing;
-  imageElement.src = projectImage;
-  linkElement.href = projectLink;
-  zipElement.href = "files/" + projectZip;
+  document.getElementById("project-name").innerText = projectName;
+  document.getElementById("project-briefing").innerText = projectBriefing;
+  document.getElementById("project-image").src = projectImage;
+  document.getElementById("project-link").href = projectLink;
+  document.getElementById("project-zip").href = "files/" + projectZip;
 
   projectLang.forEach((lang) => {
     if (languageMap[lang]) {
@@ -125,7 +118,7 @@ function displayProject() {
       img.alt = languageMap[lang].alt;
 
       iconContainer.appendChild(img);
-      iconList.appendChild(iconContainer);
+      document.getElementById("iconList").appendChild(iconContainer);
     } else {
       console.warn(`Language not found in map: ${lang}`);
     }

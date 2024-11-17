@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body class="bg-primary text-light">
+    <div class="container mt-5">
+      <div class="card bg-dark text-light shadow-lg">
+        <div class="card-header text-center">
+          <h1 class="header">Weather App</h1>
+        </div>
+        <div class="card-body">
+          <form id="searchForm" class="mb-4">
+            <div class="mb-3">
+              <label for="cityInput" class="form-label">Enter City Name</label>
+              <input
+                type="text"
+                id="cityInput"
+                class="form-control"
+                placeholder="e.g., New York"
+                autofocus />
+            </div>
+            <button
+              type="button"
+              id="searchButton"
+              class="btn btn-primary w-100">
+              Search
+            </button>
+            <div class="form-check form-switch text-end">
+              <input class="form-check-input" type="checkbox" id="unitSwitch" />
+              <label class="form-check-label" for="unitSwitch"
+                >Metric/Imperial</label
+              >
+            </div>
+          </form>
+          <div id="weatherInfo" class="weather-card text-center">
+            <img id="weatherIcon" class="mb-3" />
+            <h2 id="city"></h2>
+            <p id="temperature" class="fs-4"></p>
+            <p id="feelsLike" class="fs-5"></p>
+            <p id="description" class="fs-5"></p>
+            <div id="details" class="text-start"></div>
+            <div id="hourly" class="d-flex justify-content-around mt-4"></div>
+          </div>
+
+          <div id="forecast" class="row mt-4"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script/script.js" defer></script>
+  </body>
+</html>
