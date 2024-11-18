@@ -18,27 +18,47 @@
         <div class="card-body">
           <form id="searchForm" class="mb-4">
             <div class="mb-3">
+              <div
+                id="errorMessages"
+                class="alert alert-danger"
+                role="alert"
+                style="display: none"></div>
               <label for="cityInput" class="form-label">Enter City Name</label>
               <input
                 type="text"
                 id="cityInput"
                 class="form-control"
                 placeholder="e.g., New York"
-                autofocus />
+                autofocus
+                aria-label="City Name" />
             </div>
             <button
               type="button"
               id="searchButton"
-              class="btn btn-primary w-100">
+              class="btn btn-primary w-100"
+              aria-label="Search Weather">
               Search
             </button>
             <div class="form-check form-switch text-end">
-              <input class="form-check-input" type="checkbox" id="unitSwitch" />
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="unitSwitch"
+                aria-label="Toggle Metric/Imperial" />
               <label class="form-check-label" for="unitSwitch"
                 >Metric/Imperial</label
               >
             </div>
           </form>
+
+          <div
+            id="loadingSpinner"
+            class="text-center mb-4"
+            style="display: none">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
           <div id="weatherInfo" class="weather-card text-center">
             <img id="weatherIcon" class="mb-3" />
             <h2 id="city"></h2>
