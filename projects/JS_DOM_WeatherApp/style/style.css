@@ -21,8 +21,8 @@ body {
   width: 90%;
   max-width: 700px;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  background: #00000099;
+  box-shadow: 0 8px 15px #0000004d;
   margin-top: 50px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -34,8 +34,8 @@ body {
 .weather-card {
   margin-top: 20px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: #ffffff1a;
+  box-shadow: 0 4px 10px #00000033;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -47,6 +47,10 @@ body {
   max-width: 100px;
   margin: 15px auto;
   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   transition: transform 0.3s ease;
   -webkit-transition: transform 0.3s ease;
   -moz-transition: transform 0.3s ease;
@@ -66,7 +70,7 @@ body {
   font-size: 2rem;
   margin-bottom: 10px;
   color: #ffeb3b;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 5px #0000004d;
 }
 
 .weather-card p {
@@ -89,7 +93,7 @@ body {
   font-weight: 700;
   margin-bottom: 20px;
   color: #ffeb3b;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 8px #0000004d;
 }
 
 input {
@@ -103,7 +107,7 @@ input {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  background: rgba(255, 255, 255, 0.2);
+  background: #ffffff33;
   color: #ffffff;
   transition: background 0.3s ease, box-shadow 0.3s ease;
   -webkit-transition: background 0.3s ease, box-shadow 0.3s ease;
@@ -114,8 +118,8 @@ input {
 
 input:focus {
   outline: none;
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  background: #ffffff4d;
+  box-shadow: 0 0 5px #007bff80;
 }
 
 #searchButton {
@@ -157,7 +161,7 @@ input:focus {
   width: 100px;
   padding: 10px;
   border: 1px solid #ccc;
-  background: rgba(255, 255, 255, 0.1);
+  background: #ffffff1a;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

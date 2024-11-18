@@ -177,7 +177,9 @@ document.getElementById("searchButton").addEventListener("click", () => {
 
 document.getElementById("unitSwitch").addEventListener("change", () => {
   isMetric = !isMetric;
-  if (inputElement.value) getWeather(inputElement.value);
+  inputElement.value
+    ? getWeather(inputElement.value)
+    : getWeather(document.getElementById("city").innerHTML);
 });
 
 document.addEventListener("DOMContentLoaded", () => {

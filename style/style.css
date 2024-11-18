@@ -566,6 +566,10 @@ header {
   background-image: url(../images/countries_preview.png);
 }
 
+#weather {
+  background-image: url(../images/weather_preview.png);
+}
+
 .img-overlay {
   width: 100%;
   position: absolute;
