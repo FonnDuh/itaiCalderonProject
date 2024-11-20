@@ -67,7 +67,8 @@
 
     <section style="position: relative">
       <div class="backgroundOverlay"></div>
-      <div class="container-fluid about d-flex">
+      <div
+        class="container-fluid about d-flex flex-column justify-content-center align-items-center">
         <h1>תיק עבודות</h1>
         <p>
           שלום אורח!
@@ -138,7 +139,7 @@
         <figcaption class="figure-caption">קצת עליי</figcaption>
         <br />
         <p class="description">
-          אני איתי קלדרון בן 22, סיימתי 12 שנות לימוד באורט עם בגרות מלאה - 5
+          אני איתי קלדרון בן 23, סיימתי 12 שנות לימוד באורט עם בגרות מלאה - 5
           יחידות אנגלית, 10 יחידות מחשבים.
           <br />
           לאורך כל חיי התעניינתי בתכנות וכל הקשור במחשבים. כרגע, התשוקה שלי היא
@@ -163,7 +164,7 @@
 
     <section id="gallery">
       <div
-        class="container-fluid flex-column justify-content-center align-items-center projects">
+        class="container-fluid d-flex flex-column justify-content-center align-items-center projects">
         <div class="flex-column">
           <h2>עבודות נבחרות: HTML</h2>
           <p>
@@ -185,7 +186,6 @@
                   data-lang="SASS,Bootstrap,CSS,HTML">
                   <div class="img-wrapper">
                     <div class="projectImg" id="hereAndNow"></div>
-                    <div class="img-overlay"></div>
                   </div>
                   <div class="projectContent">
                     <h3 class="projectTitle">Here and Now</h3>
@@ -218,7 +218,6 @@
                   data-lang="SASS,Bootstrap,CSS,HTML">
                   <div class="img-wrapper">
                     <div class="projectImg" id="goingForward"></div>
-                    <div class="img-overlay"></div>
                   </div>
                   <div class="projectContent">
                     <h3 class="projectTitle">Going Forward</h3>
@@ -249,7 +248,6 @@
                   data-lang="SASS,CSS,HTML">
                   <div class="img-wrapper">
                     <div class="projectImg" id="goodCoffee"></div>
-                    <div class="img-overlay"></div>
                   </div>
                   <div class="projectContent">
                     <h3 class="projectTitle">Good Coffee</h3>
@@ -280,7 +278,6 @@
                   data-lang="SASS,Bootstrap,CSS,HTML">
                   <div class="img-wrapper">
                     <div class="projectImg" id="letUsLeadYou"></div>
-                    <div class="img-overlay"></div>
                   </div>
                   <div class="projectContent">
                     <h3 class="projectTitle">Let Us Lead You</h3>
@@ -313,7 +310,6 @@
                   data-lang="SASS,CSS,HTML">
                   <div class="img-wrapper">
                     <div class="projectImg" id="discovery"></div>
-                    <div class="img-overlay"></div>
                   </div>
                   <div class="projectContent">
                     <h3 class="projectTitle">Discovery</h3>
@@ -341,7 +337,6 @@
                   data-lang="SASS,Bootstrap,CSS,HTML">
                   <div class="img-wrapper">
                     <div class="projectImg" id="outsideBox"></div>
-                    <div class="img-overlay"></div>
                   </div>
                   <div class="projectContent">
                     <h3 class="projectTitle">Think Outside the Box</h3>
@@ -386,7 +381,6 @@
                 data-lang="SASS,Bootstrap,CSS,HTML">
                 <div class="img-wrapper">
                   <div class="projectImg" id="weather"></div>
-                  <div class="img-overlay"></div>
                 </div>
                 <div class="projectContent">
                   <h3 class="projectTitle">The Weather</h3>
@@ -417,7 +411,6 @@
                 data-lang="API,ES6,JS,SASS,Bootstrap,CSS,HTML">
                 <div class="img-wrapper">
                   <div class="projectImg" id="countries"></div>
-                  <div class="img-overlay"></div>
                 </div>
                 <div class="projectContent">
                   <h3 class="projectTitle">Countries of the World</h3>
@@ -449,7 +442,6 @@
                   data-lang="JS,Bootstrap,CSS,HTML">
                   <div class="img-wrapper">
                     <div class="projectImg" id="listCart"></div>
-                    <div class="img-overlay"></div>
                   </div>
                   <div class="projectContent">
                     <h3 class="projectTitle">List Cart</h3>
@@ -478,7 +470,6 @@
                   data-lang="JS,SASS,Bootstrap,CSS,HTML">
                   <div class="img-wrapper">
                     <div class="projectImg" id="mathGame"></div>
-                    <div class="img-overlay"></div>
                   </div>
                   <div class="projectContent">
                     <h3 class="projectTitle">Math Game</h3>
@@ -507,7 +498,6 @@
                   data-lang="JS,CSS,HTML">
                   <div class="img-wrapper">
                     <div class="projectImg" id="memoryGame"></div>
-                    <div class="img-overlay"></div>
                   </div>
                   <div class="projectContent">
                     <h3 class="projectTitle">Memory Game</h3>
@@ -534,7 +524,6 @@
                   data-lang="JS,SASS,Bootstrap,CSS,HTML">
                   <div class="img-wrapper">
                     <div class="projectImg" id="pageBuilder"></div>
-                    <div class="img-overlay"></div>
                   </div>
                   <div class="projectContent">
                     <h3 class="projectTitle">Page Builder</h3>
@@ -566,7 +555,6 @@
                   data-lang="JS,CSS,HTML">
                   <div class="img-wrapper">
                     <div class="projectImg" id="ticTacToe"></div>
-                    <div class="img-overlay"></div>
                   </div>
                   <div class="projectContent">
                     <h3 class="projectTitle">Tic Tac Toe</h3>
@@ -591,7 +579,6 @@
                   data-lang="JS,SASS,Bootstrap,CSS,HTML">
                   <div class="img-wrapper">
                     <div class="projectImg" id="userManager"></div>
-                    <div class="img-overlay"></div>
                   </div>
                   <div class="projectContent">
                     <h3 class="projectTitle">User Manager</h3>
@@ -666,7 +653,9 @@
     </section>
 
     <footer>
-      <div class="container-fluid d-flex row" id="footer">
+      <div
+        class="container-fluid d-flex justify-content-evenly flex-wrap row"
+        id="footer">
         <!-- No acc -->
         <a
           href="https://www.facebook.com/"
@@ -720,7 +709,7 @@
         </div>
       </div>
     </footer>
-    <div class="colorLine" id="bottonLine"></div>
+    <div class="colorLine"></div>
 
     <script src="script/script.js" defer></script>
   </body>
