@@ -87,7 +87,7 @@ function createBoard(diff) {
   document.getElementById("diffSelect").style.display = "none";
   document.getElementById("board").innerHTML = "";
   for (let i = 0; i < game_emojis.length; i++) {
-    let item = document.createElement("div");
+    const item = document.createElement("div");
     item.classList.add("item");
     item.innerHTML = game_emojis[i];
     document.querySelector("#board").append(item);

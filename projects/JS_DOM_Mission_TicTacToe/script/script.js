@@ -60,7 +60,7 @@ function checkWinner() {
 }
 
 function insertTile(id) {
-  let currentTile = document.getElementById(id);
+  const currentTile = document.getElementById(id);
   if (turnX && currentTile.innerHTML === "") {
     currentTile.innerHTML = "X";
     currentTile.classList.add("x");

@@ -1,10 +1,10 @@
-const API_KEY = "25c97fa0700864ea4f57de31c8195c12";
-const BASE_URL = "https://api.openweathermap.org/data/2.5/";
+const API_KEY = "25c97fa0700864ea4f57de31c8195c12",
+  BASE_URL = "https://api.openweathermap.org/data/2.5/";
 
-const inputElement = document.getElementById("cityInput");
-const forecastContainer = document.getElementById("forecast");
-const hourlyContainer = document.getElementById("hourly");
-const errorMessagesElement = document.getElementById("errorMessages");
+const inputElement = document.getElementById("cityInput"),
+  forecastContainer = document.getElementById("forecast"),
+  hourlyContainer = document.getElementById("hourly"),
+  errorMessagesElement = document.getElementById("errorMessages");
 let isMetric = true;
 
 function displayError(message) {
@@ -20,11 +20,11 @@ function clearError() {
 
 async function fetchWeatherData(endpoint, params = {}) {
   const urlParams = new URLSearchParams({
-    ...params,
-    appid: API_KEY,
-    units: isMetric ? "metric" : "imperial",
-  });
-  const response = await fetch(`${BASE_URL}${endpoint}?${urlParams}`);
+      ...params,
+      appid: API_KEY,
+      units: isMetric ? "metric" : "imperial",
+    }),
+    response = await fetch(`${BASE_URL}${endpoint}?${urlParams}`);
   if (!response.ok) {
     const errorText = await response.text();
     throw new Error(
@@ -118,9 +118,9 @@ async function getForecast(city) {
 
 async function getHourlyWeather(city) {
   try {
-    const hourlyData = await fetchWeatherData("forecast", { q: city });
+    const hourlyData = await fetchWeatherData("forecast", { q: city }),
+      hourlyForecasts = hourlyData.list.slice(0, 9);
     hourlyContainer.innerHTML = "";
-    const hourlyForecasts = hourlyData.list.slice(0, 9);
     hourlyForecasts.forEach((item) => {
       const time = new Date(item.dt * 1000).toLocaleTimeString([], {
         hour: "2-digit",
@@ -159,10 +159,10 @@ async function getAQI(lat, lon) {
         `Error fetching AQI data: ${response.statusText} (${errorText})`
       );
     }
-    const data = await response.json();
-    const aqi = data.list[0].main.aqi;
-    const levels = ["Good", "Fair", "Moderate", "Poor", "Very Poor"];
-    const level = levels[aqi - 1] || "Unknown";
+    const data = await response.json(),
+      aqi = data.list[0].main.aqi,
+      levels = ["Good", "Fair", "Moderate", "Poor", "Very Poor"],
+      level = levels[aqi - 1] || "Unknown";
     return { aqi, level };
   } catch (error) {
     console.error(`Error fetching AQI: ${error.message}`);
@@ -171,8 +171,7 @@ async function getAQI(lat, lon) {
 }
 
 document.getElementById("searchButton").addEventListener("click", () => {
-  const city = inputElement.value;
-  getWeather(city);
+  getWeather(inputElement.value);
 });
 
 document.getElementById("unitSwitch").addEventListener("change", () => {
@@ -184,16 +183,15 @@ document.getElementById("unitSwitch").addEventListener("change", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const randomCities = [
-    "New York",
-    "Tokyo",
-    "London",
-    "Paris",
-    "Sydney",
-    "Tel Aviv",
-    "Jerusalem",
-  ];
-  const randomCity =
-    randomCities[Math.floor(Math.random() * randomCities.length)];
+      "New York",
+      "Tokyo",
+      "London",
+      "Paris",
+      "Sydney",
+      "Tel Aviv",
+      "Jerusalem",
+    ],
+    randomCity = randomCities[Math.floor(Math.random() * randomCities.length)];
   getWeather(randomCity);
 
   if (navigator.geolocation) {

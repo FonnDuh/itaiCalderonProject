@@ -8,8 +8,7 @@ function createEx() {
   num2 = getRandomNumber(1, document.getElementById("difficulty").value);
   operator = document.getElementById("operator").value;
   if (operator == "random") {
-    let selector = getRandomNumber(1, 4);
-    switch (selector) {
+    switch (getRandomNumber(1, 4)) {
       case 1:
         operator = "+";
         break;
@@ -34,11 +33,11 @@ function createEx() {
 createEx();
 
 function checkAnswer() {
-  let input = document.getElementById("answer");
+  const input = document.getElementById("answer");
   if (input.value == "") {
     return;
   }
-  let row = tbody.insertRow(-1),
+  const row = tbody.insertRow(-1),
     ex = row.insertCell(0),
     rightAnswer = row.insertCell(1),
     wrongAnswer = row.insertCell(2),

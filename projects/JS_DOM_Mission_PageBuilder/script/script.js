@@ -96,7 +96,6 @@ function undo() {
 }
 
 function reset() {
-  // clearInterval(timer);
   content.innerHTML = "";
   idCount = 0;
 }

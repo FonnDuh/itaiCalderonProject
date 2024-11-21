@@ -58,7 +58,7 @@ document.getElementById("signinForm").addEventListener("submit", (event) => {
 });
 
 document.getElementById("signupForm").addEventListener("submit", (event) => {
-  event.preventDefault();
+  event.preventDefault(); // Prevent form submission
 
   if (typeof Storage !== "undefined") {
     if (
